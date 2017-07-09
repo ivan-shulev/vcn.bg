@@ -1,2 +1,71 @@
-@import '~bootstrap-material-design/dist/css/bootstrap-material-design.min.css';
-@import '~bootstrap-material-design/dist/css/ripples.min.css';
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.img-responsive {
+    max-width: 100%;
+}
+ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.closed {
+    margin-top: -100vh;
+}
+
+.text-center {
+    text-align: center;
+}
+h2 {
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+
+.button-circle {
+    background: none;
+    border: none;
+    transform: rotate(90deg);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(38, 67, 155, 0.2);
+    margin-top: 5vh;
+    span {
+        color: white;
+        font-size: 71px;
+        line-height: 0.5;
+        &:before {
+            content: "\203A";
+            animation-name: animateArrowBefore;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes animateArrowBefore {
+    69% {
+        opacity: 0;
+        margin-left: -20px;
+    }
+    70% {
+        opacity: 0.5;
+        margin-left: -20px;
+    }
+    100% {
+        opacity: 0;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,30 @@
+.initial-loader {
+    background: #00aeef;
+    background: -moz-radial-gradient(center, ellipse cover, #00aeef 0%, #26439b 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #00aeef 0%,#26439b 100%);
+    background: radial-gradient(ellipse at center, #00aeef 0%,#26439b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aeef', endColorstr='#26439b',GradientType=1 );
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-property: margin;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+
+.initial-loader--touch-move {
+    transition: none;
+}
+
+.initial-loader__image {
+    max-width: 130px;
+}
+
+.initial-loader__heading {
+    max-width: 80vw;
+}

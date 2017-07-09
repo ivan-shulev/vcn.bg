@@ -1,12 +1,14 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 const ExtractTextPlugin = require('extract-text-webpack-plugin'); //installed via npm
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const CustomPlugin = require('./custom-plugin');
 const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
 
 const config = {
     entry: {
         main: './src/index.js',
-        vendor: ['navigo', 'bootstrap-material-design/dist/js/material.min', 'bootstrap-material-design/dist/js/ripples.min']
+        vendor: ['navigo']
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -22,7 +24,7 @@ const config = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                    presets: ['env']
+                        presets: ['env']
                     }
                 }
             },
@@ -67,14 +69,9 @@ const config = {
                 use: [{
                     loader: 'html-loader',
                     options: {
-                        minimize: true,
-                        removeComments: false
+                        minimize: true
                     }
                 }],
-            },
-            {
-                test: /\.mov$/,
-                loader: 'file-loader'
             }
         ]
     },
@@ -101,6 +98,10 @@ const config = {
         //     $: 'jquery',
         //     jQuery: 'jquery'
         // })
+        new ImageminPlugin({
+            test: /\.png$|\.jpg$|\.gif$|\.svg$/,
+            include: /(src)/
+        })
     ]
 };
 
