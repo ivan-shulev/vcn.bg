@@ -31,3 +31,12 @@ router
 varw('language', 'english');
 
 el('.js-content').innerHTML += loaderHtml;
+
+// Borrowed from https://stackoverflow.com/a/18633915/5396280
+// I am doing this, because if a user closes the modal, scrolls down and
+// refreshes, the page will reload and scroll to the previous position,
+// showing the modal up top and only a small part of it visible.
+window.onbeforeunload = function() {
+    window.scroll(0, 0);
+    document.getElementsByTagName('body')[0].classList.add('hidden');
+}

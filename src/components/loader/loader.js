@@ -29,6 +29,7 @@ function handleEnd(ev) {
 function handleCloseModal(parent) {
     parent.classList.add('closed');
     document.getElementsByTagName('body')[0].classList.remove('modal--open');
+    window.scroll(0, 0);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     arrowButton.addEventListener('click', function (ev) {
         handleCloseModal(arrowButton.parentElement);
     });
+
 
     slider = document.getElementsByClassName('initial-loader')[0];
     slider.addEventListener('touchstart', handleStart, false);
