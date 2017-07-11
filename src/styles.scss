@@ -1,5 +1,8 @@
 body {
     font-family: 'Roboto', sans-serif;
+    &.modal--open {
+        overflow-y: hidden;
+    }
 }
 
 .img-responsive {

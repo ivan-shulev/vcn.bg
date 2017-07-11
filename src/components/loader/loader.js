@@ -22,14 +22,20 @@ function handleEnd(ev) {
     slider.classList.remove(touchMoveClass);
     slider.style['margin-top'] = null;
     if (slider.clientHeight / 2 < (initialY - ev.changedTouches[0].pageY)) {
-        slider.classList.add('closed');
+        handleCloseModal(slider);
     }
 }
 
+function handleCloseModal(parent) {
+    parent.classList.add('closed');
+    document.getElementsByTagName('body')[0].classList.remove('modal--open');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+    document.getElementsByTagName('body')[0].classList.add('modal--open');
     const arrowButton = document.getElementsByClassName('initial-loader__arrow-button')[0];
     arrowButton.addEventListener('click', function (ev) {
-        arrowButton.parentElement.classList.add('closed');
+        handleCloseModal(arrowButton.parentElement);
     });
 
     slider = document.getElementsByClassName('initial-loader')[0];
