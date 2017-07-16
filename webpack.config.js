@@ -8,7 +8,7 @@ const path = require('path');
 const config = {
     entry: {
         main: './src/index.js',
-        vendor: ['navigo']
+        vendor: ['navigo', 'mustache']
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -98,6 +98,9 @@ const config = {
         //     $: 'jquery',
         //     jQuery: 'jquery'
         // })
+        new webpack.ProvidePlugin({
+            Mustache: 'mustache'
+        }),
         new ImageminPlugin({
             test: /\.png$|\.jpg$|\.gif$|\.svg$/,
             include: /(src)/
