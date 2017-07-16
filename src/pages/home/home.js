@@ -1,12 +1,23 @@
 import homeHtml from './home.html';
 import homeScss from './home.scss';
-// import Mustache from 'mustache';
+import projectsObject from './projects';
+
+let homeObject, rendered, initialHTML;
+
+function renderMustache(initialHtml, contentToRender, template) {
+    Mustache.parse(initialHTML);   // optional, speeds up future uses
+    rendered = Mustache.render(initialHTML, contentToRender);
+    template.innerHTML = rendered;
+}
 
 document.addEventListener('DOMContentLoaded', function () {
-    var template = document.getElementById('template');
-    Mustache.parse(template.innerHTML);   // optional, speeds up future uses
-    var rendered = Mustache.render(template.innerHTML, {name: "Luke"});
-    template.innerHTML = rendered;
+    homeObject = document.getElementById('home');
+    initialHTML = homeObject.innerHTML;
+    renderMustache(initialHTML, {projects: projectsObject[language]}, homeObject)
+});
+
+document.addEventListener('changeLang', function(){
+    renderMustache(initialHTML, {projects: projectsObject[language]}, homeObject)
 });
 
 module.exports = {

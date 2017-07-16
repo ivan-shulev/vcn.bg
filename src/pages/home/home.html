@@ -1,17 +1,15 @@
-<section class="projects">
-    <div class="project">
-        <img class="img-responsive" src="images/projects/benchmark.jpg" alt="Benchmark business building">
-        <div class="description">
-            <h3>Benchmark</h3>
-            <ul>
-                <li>SKS</li>
-                <li>Access Control</li>
-                <li>Fire alarm system</li>
-                <li>Surveylance</li>
-            </ul>
+<section id="home" class="projects">
+    {{#projects}}
+        <div class="project">
+            <img class="img-responsive" src="{{image}}" alt="Benchmark business building">
+            <div class="description">
+                <h3>{{name}}</h3>
+                <ul>
+                    {{#services}}
+                        <li>{{.}}</li>
+                    {{/services}}
+                </ul>
+            </div>
         </div>
-    </div>
-    <script id="template" type="x-tmpl-mustache">
-        Hello {{ name }}!
-    </script>
+    {{/projects}}
 </section>
