@@ -3,4 +3,24 @@
     margin: 20px;
     background-color: #ececec;
     box-shadow: 0px 0px 5px 1px #7b7b7b;
+    position: absolute;
+    transition: 1s left;
+    &.project--displayed {
+        left: 0;
+    }
+    &.project--hidden-to-left {
+        left: -150vw;
+    }
+    &.project--hidden-to-right {
+        left: 150vw;
+    }
+    img {
+        max-width: calc(100vw - 80px);
+    }
+}
+
+.projects {
+    position: relative;
+    overflow-x: hidden;
+    height: 80vh;
 }

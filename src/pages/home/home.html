@@ -1,15 +1,21 @@
-<section id="home" class="projects">
-    {{#projects}}
-        <div class="project">
-            <img class="img-responsive" src="{{image}}" alt="Benchmark business building">
-            <div class="description">
-                <h3>{{name}}</h3>
-                <ul>
-                    {{#services}}
-                        <li>{{.}}</li>
-                    {{/services}}
-                </ul>
+<section id="home">
+    <div class="projects">
+        {{#projects}}
+            <div class="project project--hidden-to-right">
+                <img class="img-responsive" src="{{image}}" alt="Benchmark business building">
+                <div class="description">
+                    <h3>{{name}}</h3>
+                    <ul>
+                        {{#services}}
+                            <li>{{.}}</li>
+                        {{/services}}
+                    </ul>
+                </div>
             </div>
-        </div>
-    {{/projects}}
+        {{/projects}}
+    </div>
+    <div class="project-navigation">
+        <button data-direction="previous">&#60;</button>
+        <button data-direction="next">&#62;</button>
+    </div>
 </section>
