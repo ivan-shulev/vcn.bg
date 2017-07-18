@@ -8,6 +8,7 @@ import { loader, loaderHtml } from './components/loader/loader';
 const event = new Event('changeLang');
 const el = (sel) => document.querySelector(sel);
 const setContent = (id, content) => el('.js-content').innerHTML = content || el('#content-' + id).innerHTML;
+const bodyElement = el('body');
 const varw = (function (context) {
     return function (varName, varValue) {
         var value = varValue;
@@ -31,7 +32,7 @@ router
 
 varw('language', 'english');
 
-el('.js-content').innerHTML += loaderHtml;
+bodyElement.innerHTML += loaderHtml;
 
 // Borrowed from https://stackoverflow.com/a/18633915/5396280
 // I am doing this, because if a user closes the modal, scrolls down and
@@ -39,11 +40,11 @@ el('.js-content').innerHTML += loaderHtml;
 // showing the modal up top and only a small part of it visible.
 window.onbeforeunload = function() {
     window.scroll(0, 0);
-    document.getElementsByTagName('body')[0].classList.add('hidden');
+    bodyElement.classList.add('hidden');
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-    const langChangeButtons = document.getElementsByClassName('langChange')[0];
+    const langChangeButtons = el('.langChange');
     for (const button of langChangeButtons.children) {
         const languageAttrValue = button.getAttribute('data-language');
         button.addEventListener('click', function(){
@@ -52,9 +53,11 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         });
     }
-    const hamburger = document.getElementsByClassName('hamburger')[0];
+    const hamburger = el('.hamburger');
     hamburger.addEventListener('click', function(){
-        hamburger.classList.toggle('hamburger--active');
+        // hamburger.classList.toggle('hamburger--active');
+        // mainNav.classList.toggle('main-nav--displayed');
+        bodyElement.classList.toggle('menu--open');
     });
 });
 
