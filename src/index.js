@@ -52,5 +52,9 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         });
     }
+    const hamburger = document.getElementsByClassName('hamburger')[0];
+    hamburger.addEventListener('click', function(){
+        hamburger.classList.toggle('hamburger--active');
+    });
 });
 

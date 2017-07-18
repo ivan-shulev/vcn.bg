@@ -80,3 +80,42 @@ script {
         margin-left: 0;
     }
 }
+
+.main-nav {
+    position: absolute;
+    left: -100vw;
+    transition: 0.5s left;
+}
+
+header {
+    height: 50px;
+    background: #ececec;
+}
+
+.hamburger {
+    width: 50px;
+    height: 45px;
+    outline: 1px solid red;
+    padding-top: 5px;
+    &.hamburger--active {
+        .hamburger__stick:nth-child(2) {
+            opacity: 0;
+            
+        }
+        .hamburger__stick:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+        .hamburger__stick:nth-child(3) {
+            transform: rotate(135deg);
+        }
+    }
+}
+
+.hamburger__stick {
+    transition: 0.2s opacity, 0.2s transform;
+    border-bottom: 3px solid gray;
+    width: 30px;
+    height: 7px;
+    display: block;
+    margin: 0 auto;
+}
