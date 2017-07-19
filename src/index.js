@@ -3,7 +3,7 @@ import Navigo from 'navigo';
 import styles from './styles.scss';
 import { homeHtml } from './pages/home/home';
 import { loader, loaderHtml } from './components/loader/loader';
-import { navigation, navigationHtml } from './components/navigation/navigation';
+import { header, headerHtml } from './components/header/header';
 // import { aboutHtml } from './pages/about/about';
 
 const event = new Event('changeLang');
@@ -33,8 +33,8 @@ router
 
 varw('language', 'english');
 
+bodyElement.innerHTML = headerHtml + bodyElement.innerHTML;
 bodyElement.innerHTML += loaderHtml;
-el('header').innerHTML = navigationHtml;
 
 // Borrowed from https://stackoverflow.com/a/18633915/5396280
 // I am doing this, because if a user closes the modal, scrolls down and

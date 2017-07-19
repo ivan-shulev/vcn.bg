@@ -1,5 +1,5 @@
-import navigationHtml from './navigation.html';
-import navScss from './navigation.scss';
+import headerHtml from './header.html';
+import navScss from './header.scss';
 
 const bodyElement = document.querySelector('body');
 
@@ -20,5 +20,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 module.exports = {
-    navigationHtml
+    headerHtml
 };
