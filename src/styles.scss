@@ -3,26 +3,6 @@ body {
     &.modal--open {
         overflow-y: hidden;
     }
-    &.menu--open {
-        .main-nav {
-            left: 0;
-        }
-        .hamburger {
-            .hamburger__stick:nth-child(2) {
-                opacity: 0;
-                
-            }
-            .hamburger__stick:nth-child(1) {
-                transform: rotate(45deg) translate(10px, 8px);
-            }
-            .hamburger__stick:nth-child(3) {
-                transform: rotate(135deg) translate(-3px, 0px);
-            }
-        }
-        .js-content {
-            margin-left: 80vw;
-        }
-    }
 }
 
 .js-content {
@@ -106,9 +86,6 @@ button {
     left: -100vw;
     transition: 0.3s left;
     outline: 1px solid green;
-    // &.main-nav--displayed {
-    //     left: 0;
-    // }
 }
 
 header {
@@ -122,18 +99,6 @@ header {
     border-radius: 3px;
     box-shadow: 0px 0px 5px 1px #7b7b7b;
     padding-top: 5px;
-    // &.hamburger--active {
-    //     .hamburger__stick:nth-child(2) {
-    //         opacity: 0;
-            
-    //     }
-    //     .hamburger__stick:nth-child(1) {
-    //         transform: rotate(45deg) translate(10px, 8px);
-    //     }
-    //     .hamburger__stick:nth-child(3) {
-    //         transform: rotate(135deg) translate(-3px, 0px);
-    //     }
-    // }
 }
 
 .hamburger__stick {

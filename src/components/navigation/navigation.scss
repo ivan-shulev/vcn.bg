@@ -1,0 +1,22 @@
+body {
+    &.menu--open {
+        .main-nav {
+            left: 0;
+        }
+        .hamburger {
+            .hamburger__stick:nth-child(2) {
+                opacity: 0;
+                
+            }
+            .hamburger__stick:nth-child(1) {
+                transform: rotate(45deg) translate(10px, 8px);
+            }
+            .hamburger__stick:nth-child(3) {
+                transform: rotate(135deg) translate(-3px, 0px);
+            }
+        }
+        .js-content {
+            margin-left: 80vw;
+        }
+    }
+}
