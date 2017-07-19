@@ -1,3 +1,5 @@
+$common-border: 1px solid #d2d2d2;
+
 body {
     &.menu--open {
         .main-nav {
@@ -14,9 +16,67 @@ body {
             .hamburger__stick:nth-child(3) {
                 transform: rotate(135deg) translate(-3px, 0px);
             }
+            box-shadow: 0px 0px 1px 1px #d2d2d2;
         }
         .js-content {
             margin-left: 80vw;
         }
+    }
+}
+
+.hamburger {
+    width: 50px;
+    height: 45px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 1px #7b7b7b;
+    padding-top: 5px;
+    transition: 0.3s box-shadow;
+}
+
+.hamburger__stick {
+    transition: 0.3s opacity, 0.3s transform;
+    border-bottom: 3px solid gray;
+    width: 30px;
+    height: 7px;
+    display: block;
+    margin: 0 auto;
+}
+
+.js-content {
+    transition: 0.3s margin-left;
+}
+
+.main-nav {
+    position: absolute;
+    left: -100vw;
+    transition: 0.3s left;
+    background: #ececec;
+    margin-top: 5px;
+    width: 80vw;
+    border-right: $common-border;
+    border-bottom: $common-border;
+    ul {
+        padding-right: 10px;
+    }
+    a {
+        padding: 15px 0;
+        font-size: 16px;
+        display: block;
+        border-top: $common-border;
+        color: gray;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+.langChange {
+    display: flex;
+    justify-content: space-around;
+    button {
+        width: 40%;
+        border: none;
+        background: none;
+        height: 40px;
+        border-top: $common-border;
     }
 }
