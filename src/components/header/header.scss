@@ -51,7 +51,7 @@ body {
     left: -100vw;
     transition: 0.3s left;
     background: #ececec;
-    margin-top: 5px;
+    margin-top: 55px;
     width: 80vw;
     border-right: $common-border;
     border-bottom: $common-border;
@@ -79,4 +79,17 @@ body {
         height: 40px;
         border-top: $common-border;
     }
+}
+
+.logo-gray {
+    height: 30px;
+    align-self: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background: #ececec;
+    padding: 5px;
+    border-bottom: $common-border;
 }

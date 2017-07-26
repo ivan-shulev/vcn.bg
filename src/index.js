@@ -35,6 +35,7 @@ varw('language', 'english');
 
 bodyElement.innerHTML = headerHtml + bodyElement.innerHTML;
 bodyElement.innerHTML += loaderHtml;
+bodyElement.classList.remove('loading-content');
 
 // Borrowed from https://stackoverflow.com/a/18633915/5396280
 // I am doing this, because if a user closes the modal, scrolls down and
