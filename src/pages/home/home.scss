@@ -13,6 +13,9 @@
     &.project--hidden-to-right {
         margin-left: 100vw;
     }
+    &.project--touch-move {
+        transition: none;
+    }
     img {
         max-width: calc(100vw - 80px);
     }
