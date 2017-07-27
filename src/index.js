@@ -4,7 +4,7 @@ import styles from './styles.scss';
 import { homeHtml } from './pages/home/home';
 import { loader, loaderHtml } from './components/loader/loader';
 import { header, headerHtml } from './components/header/header';
-// import { aboutHtml } from './pages/about/about';
+import { contactHtml } from './components/contact/contact';
 
 const event = new Event('changeLang');
 const el = (sel) => document.querySelector(sel);
@@ -35,6 +35,7 @@ varw('language', 'english');
 
 bodyElement.innerHTML = headerHtml + bodyElement.innerHTML;
 bodyElement.innerHTML += loaderHtml;
+bodyElement.innerHTML += contactHtml;
 bodyElement.classList.remove('loading-content');
 
 // Borrowed from https://stackoverflow.com/a/18633915/5396280

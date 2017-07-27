@@ -9,6 +9,19 @@ body {
     }
 }
 
+.banner {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition-property: margin;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+
 .hidden {
     display: none;
 }
@@ -29,8 +42,12 @@ ul {
 .text-center {
     text-align: center;
 }
-h2 {
+
+h1, h2 {
     font-family: 'Titillium Web', sans-serif;
+}
+
+h2 {
     color: white;
 }
 
@@ -44,27 +61,15 @@ button {
 }
 
 .button-circle {
-    background: none;
     border: none;
-    transform: rotate(90deg);
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: rgba(38, 67, 155, 0.2);
     margin-top: 5vh;
     span {
-        color: white;
         font-size: 71px;
-        line-height: 0.5;
-        &:before {
-            content: "\203A";
-            animation-name: animateArrowBefore;
-            animation-duration: 10s;
-            animation-iteration-count: infinite;
-            position: absolute;
-            opacity: 0;
-        }
     }
+    
 }
 
 @keyframes animateArrowBefore {

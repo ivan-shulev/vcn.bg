@@ -4,17 +4,7 @@
     background: -webkit-radial-gradient(center, ellipse cover, #00aeef 0%,#26439b 100%);
     background: radial-gradient(ellipse at center, #00aeef 0%,#26439b 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aeef', endColorstr='#26439b',GradientType=1 );
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    transition-property: margin;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
-    position: absolute;
-    top: 0;
-    width: 100vw;
 }
 
 .initial-loader--touch-move {
@@ -27,4 +17,21 @@
 
 .initial-loader__heading {
     max-width: 80vw;
+}
+
+.initial-loader__arrow-button {
+    background: rgba(38, 67, 155, 0.2);
+    transform: rotate(90deg);
+    span {
+        color: white;
+        line-height: 0.5;
+        &:before {
+            content: "\203A";
+            animation-name: animateArrowBefore;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            opacity: 0;
+        }
+    }
 }
