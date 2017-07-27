@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+    const contactToggle = document.querySelector('.contact-toggle');
+    contactToggle.addEventListener('click', function(){
+        document.querySelector('.banner-contact').classList.remove('closed');
+    });
     const hamburger = document.querySelector('.hamburger');
     hamburger.addEventListener('click', function () {
         bodyElement.classList.toggle('menu--open');
