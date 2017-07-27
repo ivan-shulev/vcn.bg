@@ -16,7 +16,9 @@ body {
             .hamburger__stick:nth-child(3) {
                 transform: rotate(135deg) translate(-3px, 0px);
             }
-            box-shadow: 0px 0px 1px 1px #d2d2d2;
+            // Should it be the 1st or 2nd? Check Google Design
+            // box-shadow: 0px 0px 1px 1px #d2d2d2;
+            box-shadow: inset 0px 0px 9px 1px #7b7b7b;
         }
         .js-content {
             margin-left: 80vw;
