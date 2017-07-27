@@ -28,19 +28,19 @@ function handleEnd(ev) {
 
 function handleCloseModal(parent) {
     parent.classList.add('closed');
-    document.getElementsByTagName('body')[0].classList.remove('modal--open');
+    document.querySelector('body').classList.remove('modal--open');
     window.scroll(0, 0);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementsByTagName('body')[0].classList.add('modal--open');
-    const arrowButton = document.getElementsByClassName('initial-loader__arrow-button')[0];
+    document.querySelector('body').classList.add('modal--open');
+    const arrowButton = document.querySelector('.initial-loader__arrow-button');
     arrowButton.addEventListener('click', function (ev) {
         handleCloseModal(arrowButton.parentElement);
     });
 
 
-    slider = document.getElementsByClassName('initial-loader')[0];
+    slider = document.querySelector('.initial-loader');
     slider.addEventListener('touchstart', handleStart, false);
     slider.addEventListener('touchend', handleEnd, false);
     slider.addEventListener('touchcancel', handleEnd, false);
