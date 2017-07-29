@@ -83,7 +83,7 @@ const config = {
         historyApiFallback: true
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin(),
+        // new webpack.optimize.UglifyJsPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
