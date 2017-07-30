@@ -15,6 +15,13 @@ const englishProjects = [
         services: [
             'SKS', 'Access Control', 'Fire alarm systems', 'Surveillance'
         ]
+    },
+    {
+        image: capitalFortImg,
+        name: 'Capital Fort',
+        services: [
+            'SKS', 'Access Control', 'Fire alarm systems', 'Surveillance'
+        ]
     }
 ];
 

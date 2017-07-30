@@ -21,9 +21,9 @@ function removeHiddenClasses(itemList) {
     itemList[currentActiveElementIndex].classList.remove(projectHiddenLeft, projectHiddenRight);
 }
 
-function addActiveClass(itemList) {
-    removeHiddenClasses(itemList);
-    itemList[currentActiveElementIndex].classList.add(projectActiveClass);
+function addActiveClass() {
+    removeHiddenClasses(projectElements);
+    projectElements[currentActiveElementIndex].classList.add(projectActiveClass);
 }
 
 function hidePreviousActiveElement(itemList, currentActiveElementIndex, direction) {
@@ -36,25 +36,14 @@ function hidePreviousActiveElement(itemList, currentActiveElementIndex, directio
     }
 }
 
-function changeActiveElement(itemList, direction) {
-    let projectItemsLength = itemList.length;
+function changeActiveElement() {
     if (direction === left) {
-        if (currentActiveElementIndex === 0) {
-            currentActiveElementIndex = projectItemsLength - 1;
-        }
-        else {
-            currentActiveElementIndex--;
-        }
+        currentActiveElementIndex++;
     }
     else if (direction === right) {
-        if (currentActiveElementIndex === projectItemsLength - 1) {
-            currentActiveElementIndex = 0;
-        }
-        else {
-            currentActiveElementIndex++;
-        }
+        currentActiveElementIndex--;
     }
-    addActiveClass(itemList);
+    addActiveClass();
 }
 
 function clearClassFromAll(itemList, classToRemove) {
@@ -146,13 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
     projectElements = document.getElementsByClassName('project');
     projectElements[0].classList.add(projectActiveClass);
     projectElements[0].classList.remove(projectHiddenRight);
-    const projectNavButtons = document.getElementsByClassName('project-navigation')[0].children;
-    for (const projectButton of projectNavButtons) {
-        direction = projectButton.getAttribute('data-direction');
-        projectButton.addEventListener('click', function () {
-            changeActive();
-        });
-    }
+
     for (const project of projectElements) {
         project.addEventListener('touchstart', handleStart, false);
         project.addEventListener('touchend', handleEnd, false);
@@ -163,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('changeLang', function () {
     renderMustache(initialHTML, { projects: projectsObject[language] }, homeObject)
-    addActiveClass(projectElements);
+    addActiveClass();
 });
 
 module.exports = {
