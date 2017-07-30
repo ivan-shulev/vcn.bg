@@ -36,7 +36,21 @@ varw('language', 'english');
 bodyElement.innerHTML = headerHtml + bodyElement.innerHTML;
 bodyElement.innerHTML += loaderHtml;
 bodyElement.innerHTML += contactHtml;
-bodyElement.classList.remove('loading-content');
+
+function isViewHeightBigger() {
+    return window.innerHeight > window.innerWidth;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    bodyElement.classList.remove('loading-content');
+    
+    if(isViewHeightBigger()) {
+        bodyElement.classList.add('bigger-height');
+    }
+    else {
+        bodyElement.classList.add('bigger-width');
+    }
+});
 
 // Borrowed from https://stackoverflow.com/a/18633915/5396280
 // I am doing this, because if a user closes the modal, scrolls down and
