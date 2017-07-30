@@ -12,8 +12,8 @@ const config = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js',
-        publicPath: '/'
+        filename: 'scripts/[name].[chunkhash].js',
+        publicPath: '/vcn/'
     },
     devtool: 'source-map',
     module: {
@@ -60,7 +60,7 @@ const config = {
                     loader: 'url-loader',
                     query: {
                         limit: '50000',
-                        name: 'assets/images/[name]-[hash:6].[ext]'
+                        name: '/assets/images/[name]-[hash:6].[ext]'
                     }
                 }]
             },
@@ -90,7 +90,7 @@ const config = {
         new webpack.optimize.CommonsChunkPlugin({
             name: ['vendor', 'manifest']
         }),
-        new ExtractTextPlugin('styles.css'),
+        new ExtractTextPlugin('styles/styles.css'),
         // This is needed, so the bootstrap-sass can load its dependency
         // For some reason, the order I specify in the vendor array, does not include
         // jQuery before bootstrap and an error is thrown.
