@@ -21,7 +21,7 @@ function handleStart(ev) {
 function handleEnd(ev) {
     slider.classList.remove(touchMoveClass);
     slider.style['margin-top'] = null;
-    if (slider.clientHeight / 2 < (initialY - ev.changedTouches[0].pageY)) {
+    if (slider.clientHeight / 3 < (initialY - ev.changedTouches[0].pageY)) {
         handleCloseModal(slider);
     }
 }
