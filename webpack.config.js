@@ -13,7 +13,7 @@ const config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'scripts/[name].[chunkhash].js',
-        publicPath: '/vcn/'
+        publicPath: process.env.NODE_ENV === 'production' ? '/vcn/' : '/'
     },
     devtool: 'source-map',
     module: {
@@ -60,7 +60,7 @@ const config = {
                     loader: 'url-loader',
                     query: {
                         limit: '50000',
-                        name: '/assets/images/[name]-[hash:6].[ext]'
+                        name: 'assets/images/[name]-[hash:6].[ext]'
                     }
                 }]
             },
@@ -83,6 +83,8 @@ const config = {
         historyApiFallback: true
     },
     plugins: [
+        // Not needed, this is ran automatically with webpack -p
+        // see https://webpack.js.org/guides/production/
         // new webpack.optimize.UglifyJsPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html'
