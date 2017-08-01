@@ -15,8 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     const contactToggle = document.querySelector('.contact-toggle');
     contactToggle.addEventListener('click', function(){
+        const contactModal = document.querySelector('.banner-contact');
         document.querySelector('body').classList.add('modal--open');
-        document.querySelector('.banner-contact').classList.remove('closed');
+        contactModal.classList.remove('banner--hidden');
+        contactModal.classList.remove('closed');
     });
     const hamburger = document.querySelector('.hamburger');
     hamburger.addEventListener('click', function () {

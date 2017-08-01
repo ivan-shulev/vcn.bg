@@ -2,6 +2,9 @@
     background-color: #ececec;
     justify-content: space-around;
     color: gray;
+    &.banner--hidden {
+        opacity: 0;
+    }
 }
 
 .banner-contact__close-button {

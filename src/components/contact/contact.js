@@ -1,11 +1,18 @@
 import contactHtml from './contact.html';
 import './contact.scss';
 
+
 document.addEventListener('DOMContentLoaded', function () {
     const closeButton = document.querySelector('.banner-contact__close-button');
-    closeButton.addEventListener('click', function(){
+    closeButton.addEventListener('click', function () {
+        const parent = closeButton.parentNode;
         document.querySelector('body').classList.remove('modal--open');
-        closeButton.parentNode.classList.add('closed');
+        parent.classList.add('closed');
+        parent.addEventListener('transitionend', function (event) {
+            if(parent.classList.contains('closed')) {
+                parent.classList.add('banner--hidden');
+            }
+        }, false);
     });
 });
 

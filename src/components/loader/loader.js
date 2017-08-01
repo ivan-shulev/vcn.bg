@@ -30,6 +30,9 @@ function handleCloseModal(parent) {
     parent.classList.add('closed');
     document.querySelector('body').classList.remove('modal--open');
     window.scroll(0, 0);
+    parent.addEventListener('transitionend', function (event) {
+        parent.classList.add('hidden');
+    }, false);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
