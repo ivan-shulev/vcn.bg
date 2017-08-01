@@ -28,3 +28,13 @@
 .project-navigation {
     position: absolute;
 }
+
+.bigger-width {
+    .project {
+        display: inline-flex;
+        justify-content: space-between;
+        .text-center {
+            flex-basis: 60%;
+        }
+    }
+}

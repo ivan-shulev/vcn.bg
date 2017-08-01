@@ -41,16 +41,28 @@ function isViewHeightBigger() {
     return window.innerHeight > window.innerWidth;
 }
 
+function handleScreenRatio() {
+    const biggerHeightClass = 'bigger-height';
+    const biggerWidthClass = 'bigger-width';
+    if(isViewHeightBigger()) {
+        bodyElement.classList.remove(biggerWidthClass);
+        bodyElement.classList.add(biggerHeightClass);
+    }
+    else {
+        bodyElement.classList.remove(biggerHeightClass);
+        bodyElement.classList.add(biggerWidthClass);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     bodyElement.classList.remove('loading-content');
     
-    if(isViewHeightBigger()) {
-        bodyElement.classList.add('bigger-height');
-    }
-    else {
-        bodyElement.classList.add('bigger-width');
-    }
+    handleScreenRatio();
 });
+
+window.onresize = function() {
+    handleScreenRatio();
+}
 
 // Borrowed from https://stackoverflow.com/a/18633915/5396280
 // I am doing this, because if a user closes the modal, scrolls down and
