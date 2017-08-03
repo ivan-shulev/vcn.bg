@@ -5,8 +5,9 @@ import { homeHtml } from './pages/home/home';
 import { loader, loaderHtml } from './components/loader/loader';
 import { header, headerHtml } from './components/header/header';
 import { contactHtml } from './components/contact/contact';
+import { servicesHtml } from './pages/services/services';
 
-const event = new Event('changeLang');
+const clEvent = new Event('changeLang');
 const el = (sel) => document.querySelector(sel);
 const setContent = (id, content) => el('.js-content').innerHTML = content || el('#content-' + id).innerHTML;
 const bodyElement = el('body');
@@ -18,18 +19,42 @@ const varw = (function (context) {
             get: function () { return value; },
             set: function (v) {
                 value = v;
-                document.dispatchEvent(event);
+                document.dispatchEvent(clEvent);
             }
         });
     };
 })(window);
-const router = new Navigo();
-router
-    .on({
-        'about': () => setContent('About', aboutHtml),
-        '*': () => setContent('Home', homeHtml)
-    })
-    .resolve();
+
+function dispatchRouteChangeEvent(detail) {
+    const crEvent = new CustomEvent('changeRoute', {detail});
+    document.dispatchEvent(crEvent);
+}
+
+function handleRouting() {
+    const router = new Navigo();
+    router
+        .on({
+            // 'about': () => setContent('About', aboutHtml),
+            'services': () => setContent('Services', servicesHtml),
+            'projects': () => {
+                setContent('Home', homeHtml);
+                dispatchRouteChangeEvent('home');      
+            },
+            '*': () => {
+                setContent('Home', homeHtml);
+                dispatchRouteChangeEvent('home');      
+            }
+        })
+        .resolve();
+
+    const navigoLinks = document.querySelectorAll('[data-navigo]');
+    navigoLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            router.navigate(e.target.getAttribute('href'));
+        })
+    });
+}
 
 varw('language', 'english');
 
@@ -56,7 +81,7 @@ function handleScreenRatio() {
 
 document.addEventListener('DOMContentLoaded', function () {
     bodyElement.classList.remove('loading-content');
-    
+    handleRouting();
     handleScreenRatio();
 });
 

@@ -129,7 +129,11 @@ function changeActive() {
     changeActiveElement(projectElements, direction)
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('changeRoute', function (e) {
+    if(e.detail !== 'home') {
+        document.removeEventListener('changeLang', changeLang, true);
+        return;
+    }
     homeObject = document.querySelector('.projects');
     initialHTML = homeObject.innerHTML;
     renderMustache(initialHTML, { projects: projectsObject[language] }, homeObject);
@@ -145,10 +149,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-document.addEventListener('changeLang', function () {
+function changeLang() {
     renderMustache(initialHTML, { projects: projectsObject[language] }, homeObject)
     addActiveClass();
-});
+}
+
+document.addEventListener('changeLang', changeLang);
 
 module.exports = {
     homeHtml
