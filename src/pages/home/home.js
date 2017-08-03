@@ -1,6 +1,7 @@
 import homeHtml from './home.html';
 import homeScss from './home.scss';
 import projectsObject from './projects';
+import renderMustache from '../../utils/render-mustache';
 
 let homeObject, rendered, initialHTML, projectElements, initialX, direction;
 let currentActiveElementIndex = 0;
@@ -11,11 +12,11 @@ const projectHiddenRight = 'project--hidden-to-right';
 const right = 'right';
 const left = 'left';
 
-function renderMustache(initialHtml, contentToRender, template) {
-    Mustache.parse(initialHTML);   // optional, speeds up future uses
-    rendered = Mustache.render(initialHTML, contentToRender);
-    template.innerHTML = rendered;
-}
+// function renderMustache(initialHtml, contentToRender, template) {
+//     Mustache.parse(initialHTML);   // optional, speeds up future uses
+//     rendered = Mustache.render(initialHTML, contentToRender);
+//     template.innerHTML = rendered;
+// }
 
 function removeHiddenClasses(itemList) {
     itemList[currentActiveElementIndex].classList.remove(projectHiddenLeft, projectHiddenRight);
