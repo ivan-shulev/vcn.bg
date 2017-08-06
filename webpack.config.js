@@ -1,7 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 const ExtractTextPlugin = require('extract-text-webpack-plugin'); //installed via npm
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const CustomPlugin = require('./custom-plugin');
 const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
 
