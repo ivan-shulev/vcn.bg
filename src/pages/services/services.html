@@ -1,5 +1,12 @@
-<section>
-    <div>
-        servoces
-    </div>
+<section class="services">
+    <h4>{{content.header}}:</h4>
+    <p>{{{content.firstRow}}}:</p>
+    <ul>
+        {{#content.servicesArray}}
+            <li>{{.}}</li>
+        {{/content.servicesArray}}
+    </ul>
+    <p>{{content.secondRow}}</p>
+    <p>{{content.thirdRow}}</p>
+    <p>{{content.fourthRow}}</p>
 </section>
