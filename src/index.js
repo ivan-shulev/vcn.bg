@@ -26,7 +26,7 @@ const varw = (function (context) {
 })(window);
 
 function dispatchRouteChangeEvent(detail) {
-    const crEvent = new CustomEvent('changeRoute', {detail});
+    const crEvent = new CustomEvent('changeRoute', { detail });
     document.dispatchEvent(crEvent);
 }
 
@@ -35,14 +35,17 @@ function handleRouting() {
     router
         .on({
             // 'about': () => setContent('About', aboutHtml),
-            'services': () => setContent('Services', servicesHtml),
+            'services': () => {
+                setContent('Services', servicesHtml);
+                dispatchRouteChangeEvent('services');
+            },
             'projects': () => {
                 setContent('Home', homeHtml);
-                dispatchRouteChangeEvent('home');      
+                dispatchRouteChangeEvent('home');
             },
             '*': () => {
                 setContent('Home', homeHtml);
-                dispatchRouteChangeEvent('home');      
+                dispatchRouteChangeEvent('home');
             }
         })
         .resolve();
@@ -69,7 +72,7 @@ function isViewHeightBigger() {
 function handleScreenRatio() {
     const biggerHeightClass = 'bigger-height';
     const biggerWidthClass = 'bigger-width';
-    if(isViewHeightBigger()) {
+    if (isViewHeightBigger()) {
         bodyElement.classList.remove(biggerWidthClass);
         bodyElement.classList.add(biggerHeightClass);
     }
@@ -85,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
     handleScreenRatio();
 });
 
-window.onresize = function() {
+window.onresize = function () {
     handleScreenRatio();
 }
 
@@ -93,7 +96,7 @@ window.onresize = function() {
 // I am doing this, because if a user closes the modal, scrolls down and
 // refreshes, the page will reload and scroll to the previous position,
 // showing the modal up top and only a small part of it visible.
-window.onbeforeunload = function() {
+window.onbeforeunload = function () {
     window.scroll(0, 0);
     bodyElement.classList.add('hidden');
 }

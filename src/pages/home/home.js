@@ -2,6 +2,7 @@ import homeHtml from './home.html';
 import homeScss from './home.scss';
 import projectsObject from './projects';
 import renderMustache from '../../utils/render-mustache';
+import setChangeLang from '../../utils/change-lang';
 
 let homeObject, rendered, initialHTML, projectElements, initialX, direction;
 let currentActiveElementIndex = 0;
@@ -131,9 +132,9 @@ function changeActive() {
 
 document.addEventListener('changeRoute', function (e) {
     if(e.detail !== 'home') {
-        document.removeEventListener('changeLang', changeLang, true);
         return;
     }
+    setChangeLang(changeLang, 'home');
     homeObject = document.querySelector('.projects');
     initialHTML = homeObject.innerHTML;
     renderMustache(initialHTML, { projects: projectsObject[language] }, homeObject);
@@ -149,12 +150,10 @@ document.addEventListener('changeRoute', function (e) {
     }
 });
 
-function changeLang() {
+const changeLang = function () {
     renderMustache(initialHTML, { projects: projectsObject[language] }, homeObject)
     addActiveClass();
 }
-
-document.addEventListener('changeLang', changeLang);
 
 module.exports = {
     homeHtml
