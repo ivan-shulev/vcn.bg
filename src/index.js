@@ -2,10 +2,11 @@ import Navigo from 'navigo';
 
 import styles from './styles.scss';
 import { homeHtml } from './pages/home/home';
+import { aboutHtml } from './pages/about/about';
+import { servicesHtml } from './pages/services/services';
 import { loader, loaderHtml } from './components/loader/loader';
 import { header, headerHtml } from './components/header/header';
 import { contactHtml } from './components/contact/contact';
-import { servicesHtml } from './pages/services/services';
 
 const clEvent = new Event('changeLang');
 const el = (sel) => document.querySelector(sel);
@@ -34,7 +35,10 @@ function handleRouting() {
     const router = new Navigo();
     router
         .on({
-            // 'about': () => setContent('About', aboutHtml),
+            'about': () => {
+                setContent('About', aboutHtml);
+                dispatchRouteChangeEvent('about');
+            },
             'services': () => {
                 setContent('Services', servicesHtml);
                 dispatchRouteChangeEvent('services');

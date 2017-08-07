@@ -1,14 +1,25 @@
 import aboutHtml from './about.html';
-import aboutTranslation from './abouttrans';
-$(function () {
-    const textHolder = $('[data-selector="about-body"]');
-    textHolder.html(aboutTranslation[language]);
-    $(document).on('changeLang', {},
-        function (event) {
-            textHolder.html(aboutTranslation[language]);
-        }
-    );
+import aboutScss from './about.scss';
+import aboutTrans from './about-translations';
+import setChangeLang from '../../utils/change-lang';
+import renderMustache from '../../utils/render-mustache';
+
+let aboutContainer, initialHTML;
+
+const renderHtml = function () {
+    renderMustache(initialHTML, { content: aboutTrans[language] }, aboutContainer);
+}
+
+document.addEventListener('changeRoute', function (e) {
+    if(e.detail !== 'about') {
+        return;
+    }
+    aboutContainer = document.querySelector('.about');
+    initialHTML = aboutContainer.innerHTML;
+    renderHtml();
+    setChangeLang(renderHtml, 'about');
 });
+
 module.exports = {
     aboutHtml
 };
