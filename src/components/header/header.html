@@ -5,11 +5,11 @@
         <span class="hamburger__stick"></span>
     </div>
     <nav role="main" class="main-nav">
-        <ul>
-            <li><a href="about" data-navigo>About</a></li>
-            <li><a href="projects" data-navigo>Projects</a></li>
-            <li><a href="services" data-navigo>Services</a></li>
-            <li><button class="text-left contact-toggle" type="button">Contact</button></li>
+        <ul data-main-navigation-links>
+            <li><a href="about" data-navigo>{{links.firstLink}}</a></li>
+            <li><a href="projects" data-navigo>{{links.secondLink}}</a></li>
+            <li><a href="services" data-navigo>{{links.thirdLink}}</a></li>
+            <li><button class="text-left contact-toggle" type="button">{{links.fourthLink}}</button></li>
         </ul>
         <div class="langChange">
             <button data-language="bulgarian"><span><img src="images/bg.png" alt="Bulgaria flag - small"></span></button>

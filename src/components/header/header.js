@@ -1,13 +1,26 @@
 import headerHtml from './header.html';
 import navScss from './header.scss';
+import linkTranslations from './menu-translations';
+import setChangeLang from '../../utils/change-lang';
+import renderMustache from '../../utils/render-mustache';
 
+let mainNavContainer, initialHTML;
 const bodyElement = document.querySelector('body');
 
 function closeMenu() {
     bodyElement.classList.remove('menu--open');
 }
 
+const renderHtml = function () {
+    renderMustache(initialHTML, { links: linkTranslations[language] }, mainNavContainer);
+}
+
+document.addEventListener('changeLang', renderHtml);
+
 document.addEventListener('DOMContentLoaded', function () {
+    mainNavContainer = document.querySelector('[data-main-navigation-links]');
+    initialHTML = mainNavContainer.innerHTML;
+    renderHtml();
     const langChangeButtons = document.querySelector('.langChange');
     for (const button of langChangeButtons.children) {
         const languageAttrValue = button.getAttribute('data-language');

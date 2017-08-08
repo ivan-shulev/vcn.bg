@@ -64,7 +64,7 @@ function handleRouting() {
     });
 }
 
-varw('language', 'english');
+varw('language', 'bulgarian');
 
 bodyElement.innerHTML = headerHtml + bodyElement.innerHTML;
 bodyElement.innerHTML += loaderHtml;
