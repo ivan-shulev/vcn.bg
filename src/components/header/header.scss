@@ -23,6 +23,14 @@ body {
         .js-content {
             margin-left: 80vw;
         }
+        &.bigger-width {
+            .js-content {
+                margin-left: 60vw;
+            }
+            .main-nav {
+                width: 60vw;
+            }
+        }
     }
 }
 
@@ -57,7 +65,6 @@ body {
     width: 80vw;
     border-right: $common-border;
     border-bottom: $common-border;
-    padding-left: 10px;
     ul {
         padding-right: 10px;
     }
