@@ -11,14 +11,11 @@ body {
                 
             }
             .hamburger__stick:nth-child(1) {
-                transform: rotate(45deg) translate(10px, 8px);
+                transform: rotate(45deg) translate(7px, 9px);
             }
             .hamburger__stick:nth-child(3) {
-                transform: rotate(135deg) translate(-3px, 0px);
+                transform: rotate(135deg) translate(-6px, 8px);
             }
-            // Should it be the 1st or 2nd? Check Google Design
-            // box-shadow: 0px 0px 1px 1px #d2d2d2;
-            box-shadow: inset 0px 0px 9px 1px #7b7b7b;
         }
         .js-content {
             margin-left: 80vw;
@@ -34,22 +31,25 @@ body {
     }
 }
 
+$hamburger-stick-width: 35px;
+
+.header__logo-aligner {
+    width: $hamburger-stick-width;
+}
+
 .hamburger {
-    width: 50px;
-    height: 45px;
-    border-radius: 3px;
-    box-shadow: 0px 0px 5px 1px #7b7b7b;
-    padding-top: 5px;
-    transition: 0.3s box-shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hamburger__stick {
     transition: 0.3s opacity, 0.3s transform;
-    border-bottom: 3px solid gray;
-    width: 30px;
-    height: 7px;
+    width: $hamburger-stick-width;
     display: block;
+    height: 3px;
     margin: 0 auto;
+    background: gray;
 }
 
 .js-content {
@@ -61,7 +61,7 @@ body {
     left: -100vw;
     transition: 0.3s left;
     background: #ececec;
-    margin-top: 55px;
+    margin-top: 40px;
     width: 80vw;
     border-right: $common-border;
     border-bottom: $common-border;
@@ -97,7 +97,7 @@ body {
 }
 
 .logo-gray {
-    height: 30px;
+    height: 25px;
     align-self: center;
 }
 
@@ -105,6 +105,6 @@ header {
     display: flex;
     justify-content: space-between;
     background: #ececec;
-    padding: 5px 20px;
+    padding: 15px 20px;
     border-bottom: $common-border;
 }
