@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const contactToggle = document.querySelector('.contact-toggle');
     contactToggle.addEventListener('click', function(){
         const contactModal = document.querySelector('.banner-contact');
-        document.querySelector('body').classList.add('modal--open');
+        bodyElement.classList.add('modal--open');
+        bodyElement.classList.remove('menu--open');
         contactModal.classList.remove('banner--hidden');
         contactModal.classList.remove('closed');
     });

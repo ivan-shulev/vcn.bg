@@ -58,6 +58,7 @@ function handleRouting() {
     navigoLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
+            bodyElement.classList.remove('menu--open');
             router.navigate(e.target.getAttribute('href'));
         })
     });

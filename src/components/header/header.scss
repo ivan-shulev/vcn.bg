@@ -57,6 +57,7 @@ body {
     width: 80vw;
     border-right: $common-border;
     border-bottom: $common-border;
+    padding-left: 10px;
     ul {
         padding-right: 10px;
     }
@@ -97,6 +98,6 @@ header {
     display: flex;
     justify-content: space-between;
     background: #ececec;
-    padding: 5px;
+    padding: 5px 20px;
     border-bottom: $common-border;
 }
