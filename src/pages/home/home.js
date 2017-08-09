@@ -142,12 +142,13 @@ document.addEventListener('changeRoute', function (e) {
     projectElements[0].classList.add(projectActiveClass);
     projectElements[0].classList.remove(projectHiddenRight);
 
-    for (const project of projectElements) {
-        project.addEventListener('touchstart', handleStart, false);
-        project.addEventListener('touchend', handleEnd, false);
-        project.addEventListener('touchcancel', handleEnd, false);
-        project.addEventListener('touchmove', handleMove, false);
-    }
+    // Slide left-to-right-and-back code
+    // for (const project of projectElements) {
+    //     project.addEventListener('touchstart', handleStart, false);
+    //     project.addEventListener('touchend', handleEnd, false);
+    //     project.addEventListener('touchcancel', handleEnd, false);
+    //     project.addEventListener('touchmove', handleMove, false);
+    // }
 });
 
 const changeLang = function () {

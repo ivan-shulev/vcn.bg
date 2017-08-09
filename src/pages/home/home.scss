@@ -23,8 +23,10 @@
 }
 
 .projects {
-    display: inline-flex;
-    overflow-x: hidden;
+    // display: inline-flex;
+    // overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
 }
 
