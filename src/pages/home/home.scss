@@ -2,7 +2,7 @@
     padding: 20px;
     margin: 20px;
     background-color: #ececec;
-    box-shadow: 0px 0px 5px 1px #7b7b7b;
+    box-shadow: 0px 0px 5px 1px #bbb;
     transition: 0.5s margin-left;
     min-width: calc(100vw - 80px);
     &.project--displayed {
@@ -16,6 +16,9 @@
     }
     &.project--touch-move {
         transition: none;
+    }
+    ul {
+        padding-left: 0;
     }
 }
 
