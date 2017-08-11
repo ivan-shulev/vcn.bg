@@ -1,12 +1,13 @@
 <section id="home">
+    <h3>{{content.title}}</h3>
     <div class="projects">
-        {{#projects}}
+        {{#content.projects}}
             <div class="project project--hidden-to-right">
                 <div class="text-center">
                     <img class="img-responsive" src="{{image}}" alt="Benchmark business building">
                 </div>
                 <div class="description">
-                    <h3>{{name}}</h3>
+                    <h4>{{name}}</h4>
                     <ul>
                         {{#services}}
                             <li>{{.}}</li>
@@ -14,6 +15,6 @@
                     </ul>
                 </div>
             </div>
-        {{/projects}}
+        {{/content.projects}}
     </div>
 </section>

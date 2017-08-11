@@ -1,6 +1,6 @@
 import homeHtml from './home.html';
 import homeScss from './home.scss';
-import projectsObject from './projects';
+import homeTrans from './home-translations';
 import renderMustache from '../../utils/render-mustache';
 import setChangeLang from '../../utils/change-lang';
 
@@ -12,12 +12,6 @@ const projectHiddenLeft = 'project--hidden-to-left';
 const projectHiddenRight = 'project--hidden-to-right';
 const right = 'right';
 const left = 'left';
-
-// function renderMustache(initialHtml, contentToRender, template) {
-//     Mustache.parse(initialHTML);   // optional, speeds up future uses
-//     rendered = Mustache.render(initialHTML, contentToRender);
-//     template.innerHTML = rendered;
-// }
 
 function removeHiddenClasses(itemList) {
     itemList[currentActiveElementIndex].classList.remove(projectHiddenLeft, projectHiddenRight);
@@ -130,17 +124,21 @@ function changeActive() {
     changeActiveElement(projectElements, direction)
 }
 
+function renderHtml(){
+    renderMustache(initialHTML, { content: homeTrans[language] }, homeObject);
+}
+
 document.addEventListener('changeRoute', function (e) {
     if(e.detail !== 'home') {
         return;
     }
     setChangeLang(changeLang, 'home');
-    homeObject = document.querySelector('.projects');
+    homeObject = document.querySelector('#home');
     initialHTML = homeObject.innerHTML;
-    renderMustache(initialHTML, { projects: projectsObject[language] }, homeObject);
     projectElements = document.getElementsByClassName('project');
-    projectElements[0].classList.add(projectActiveClass);
-    projectElements[0].classList.remove(projectHiddenRight);
+    renderHtml();
+    // projectElements[0].classList.add(projectActiveClass);
+    // projectElements[0].classList.remove(projectHiddenRight);
 
     // Slide left-to-right-and-back code
     // for (const project of projectElements) {
@@ -152,8 +150,8 @@ document.addEventListener('changeRoute', function (e) {
 });
 
 const changeLang = function () {
-    renderMustache(initialHTML, { projects: projectsObject[language] }, homeObject)
-    addActiveClass();
+    renderHtml();
+    // addActiveClass();
 }
 
 module.exports = {

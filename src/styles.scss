@@ -9,6 +9,10 @@ body {
     }
 }
 
+section:not(.banner) {
+    padding: 20px;
+}
+
 .banner {
     height: 100vh;
     display: flex;

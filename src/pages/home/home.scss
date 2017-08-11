@@ -1,22 +1,22 @@
 .project {
     padding: 20px;
-    margin: 20px;
+    margin-bottom: 20px;
     background-color: #ececec;
     box-shadow: 0px 0px 5px 1px #bbb;
     transition: 0.5s margin-left;
     min-width: calc(100vw - 80px);
-    &.project--displayed {
-        margin-left: 20px;
-    }
-    &.project--hidden-to-left {
-        margin-left: calc(20px - 100vw);
-    }
-    &.project--hidden-to-right {
-        margin-left: 20px;
-    }
-    &.project--touch-move {
-        transition: none;
-    }
+    // &.project--displayed {
+    //     margin-left: 20px;
+    // }
+    // &.project--hidden-to-left {
+    //     margin-left: calc(20px - 100vw);
+    // }
+    // &.project--hidden-to-right {
+    //     margin-left: 20px;
+    // }
+    // &.project--touch-move {
+    //     transition: none;
+    // }
     ul {
         padding-left: 0;
     }
