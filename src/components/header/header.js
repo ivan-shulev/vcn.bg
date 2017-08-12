@@ -54,8 +54,15 @@ document.addEventListener('DOMContentLoaded', function () {
         closeMenu();
     });
     const hamburger = document.querySelector('.hamburger');
+    const mainContentContainer = document.querySelector('.js-content');
     hamburger.addEventListener('click', function () {
         bodyElement.classList.toggle('menu--open');
+        mainContentContainer.classList.add('--to-right');
+    });
+    mainContentContainer.addEventListener('transitionend', (e) => {
+        if(!bodyElement.classList.contains('menu--open')) {
+            mainContentContainer.classList.remove('--to-right');
+        }
     });
 });
 

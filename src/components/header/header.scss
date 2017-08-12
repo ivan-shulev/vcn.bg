@@ -67,6 +67,9 @@ $hamburger-stick-width: 35px;
 
 .js-content {
     transition: 0.3s margin-left;
+    &.--to-right {
+        width: 100vw;
+    }
 }
 
 .main-nav {
