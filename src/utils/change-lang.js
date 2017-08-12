@@ -1,3 +1,4 @@
+import { navigoReRender } from './navigo-render';
 let _changeLangFunc, _route;
 
 function changeLang() {
@@ -20,4 +21,5 @@ module.exports = function setChangeLang(changeLangFunc, route) {
         _route = route;
     }
     document.addEventListener('changeLang', changeLang);
+    document.addEventListener('changeLang', navigoReRender);
 };

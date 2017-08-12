@@ -1,13 +1,15 @@
 import Navigo from 'navigo';
 
 import styles from './styles.scss';
-import { homeHtml } from './pages/home/home';
-import { aboutHtml } from './pages/about/about';
-import { servicesHtml } from './pages/services/services';
+import homeHtml from './pages/home/home';
+import aboutHtml from './pages/about/about';
+import servicesHtml from './pages/services/services';
 import { loader, loaderHtml } from './components/loader/loader';
-import { header, headerHtml } from './components/header/header';
-import { contactHtml } from './components/contact/contact';
+import headerHtml from './components/header/header';
+import contactHtml from './components/contact/contact';
+import { initialNavigoRender } from './utils/navigo-render';
 
+let router;
 const clEvent = new Event('changeLang');
 const el = (sel) => document.querySelector(sel);
 const setContent = (id, content) => el('.js-content').innerHTML = content || el('#content-' + id).innerHTML;
@@ -32,7 +34,7 @@ function dispatchRouteChangeEvent(detail) {
 }
 
 function handleRouting() {
-    const router = new Navigo();
+    router = new Navigo();
     router
         .on({
             'about': () => {
@@ -53,15 +55,6 @@ function handleRouting() {
             }
         })
         .resolve();
-
-    const navigoLinks = document.querySelectorAll('[data-navigo]');
-    navigoLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            bodyElement.classList.remove('menu--open');
-            router.navigate(e.target.getAttribute('href'));
-        })
-    });
 }
 
 varw('language', 'bulgarian');
@@ -91,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
     bodyElement.classList.remove('loading-content');
     handleRouting();
     handleScreenRatio();
+    initialNavigoRender(router);
 });
 
 window.onresize = function () {
