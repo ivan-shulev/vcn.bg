@@ -1,6 +1,4 @@
-$color-lightest-gray: #ececec;
-$color-light-gray: #d2d2d2;
-$color-gray: gray;
+@import '../../utils/variables';
 $common-border: 1px solid $color-light-gray;
 
 body {
@@ -21,6 +19,7 @@ body {
             }
         }
         .js-content {
+            overflow-x: hidden;
             margin-left: 80vw;
         }
         &.bigger-width {
