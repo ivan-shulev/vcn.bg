@@ -6,6 +6,7 @@ import renderMustache from '../../utils/render-mustache';
 
 let mainNavContainer, initialHTML;
 const bodyElement = document.querySelector('body');
+const hiddenClass = 'hidden';
 
 function closeMenu() {
     bodyElement.classList.remove('menu--open');
@@ -15,19 +16,32 @@ const renderHtml = function () {
     renderMustache(initialHTML, { links: linkTranslations[language] }, mainNavContainer);
 }
 
+function showActiveLangButton(buttons) {
+    for (let button of buttons) {
+        const languageAttrValue = button.getAttribute('data-language');
+        if(languageAttrValue !== language) {
+            button.classList.remove(hiddenClass);
+        }
+    }
+}
+
 document.addEventListener('changeLang', renderHtml);
 
 document.addEventListener('DOMContentLoaded', function () {
     mainNavContainer = document.querySelector('[data-main-navigation-links]');
     initialHTML = mainNavContainer.innerHTML;
     renderHtml();
-    const langChangeButtons = document.querySelector('.langChange');
-    for (const button of langChangeButtons.children) {
+    const langChangeButtons = document.querySelector('.lang-change-buttons').children;
+    for (let button of langChangeButtons) {
         const languageAttrValue = button.getAttribute('data-language');
+        if(languageAttrValue !== language) {
+            button.classList.remove(hiddenClass);
+        }
         button.addEventListener('click', function () {
             if (languageAttrValue !== language) {
                 language = languageAttrValue;
-                closeMenu();
+                button.classList.add(hiddenClass);
+                showActiveLangButton(langChangeButtons);
             }
         });
     }

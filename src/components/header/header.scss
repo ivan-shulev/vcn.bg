@@ -1,4 +1,7 @@
-$common-border: 1px solid #d2d2d2;
+$color-lightest-gray: #ececec;
+$color-light-gray: #d2d2d2;
+$color-gray: gray;
+$common-border: 1px solid $color-light-gray;
 
 body {
     &.menu--open {
@@ -33,14 +36,25 @@ body {
 
 $hamburger-stick-width: 35px;
 
-.header__logo-aligner {
-    width: $hamburger-stick-width;
+.lang-change-buttons {
+    min-width: $hamburger-stick-width;
+    button {
+        border: none;
+        background: $color-light-gray;
+        padding: 0;
+        color: $color-gray;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
 }
 
 .hamburger {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 25px;
+    align-self: center;
 }
 
 .hamburger__stick {
@@ -49,7 +63,7 @@ $hamburger-stick-width: 35px;
     display: block;
     height: 3px;
     margin: 0 auto;
-    background: gray;
+    background: $color-gray;
 }
 
 .js-content {
@@ -60,8 +74,8 @@ $hamburger-stick-width: 35px;
     position: absolute;
     left: -100vw;
     transition: 0.3s left;
-    background: #ececec;
-    margin-top: 40px;
+    background: $color-lightest-gray;
+    margin-top: 49px;
     width: 80vw;
     border-right: $common-border;
     border-bottom: $common-border;
@@ -78,21 +92,9 @@ $hamburger-stick-width: 35px;
         font-size: 16px;
         display: block;
         border-top: $common-border;
-        color: gray;
+        color: $color-gray;
         text-decoration: none;
         font-weight: bold;
-    }
-}
-
-.langChange {
-    display: flex;
-    justify-content: space-around;
-    button {
-        width: 40%;
-        border: none;
-        background: none;
-        height: 40px;
-        border-top: $common-border;
     }
 }
 
@@ -104,7 +106,7 @@ $hamburger-stick-width: 35px;
 header {
     display: flex;
     justify-content: space-between;
-    background: #ececec;
+    background: $color-lightest-gray;
     padding: 15px 20px;
     border-bottom: $common-border;
 }
