@@ -12,6 +12,7 @@ body {
 
 section:not(.banner) {
     padding: 20px;
+    width: calc(100vw - 40px);
 }
 
 .banner {
