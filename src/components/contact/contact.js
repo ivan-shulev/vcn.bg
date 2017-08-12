@@ -20,6 +20,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-module.exports = {
-    contactHtml
-};
+module.exports = contactHtml;

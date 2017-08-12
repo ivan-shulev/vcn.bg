@@ -20,6 +20,4 @@ document.addEventListener('changeRoute', function (e) {
     setChangeLang(renderHtml, 'services');
 });
 
-module.exports = {
-    servicesHtml
-};
+module.exports = servicesHtml;

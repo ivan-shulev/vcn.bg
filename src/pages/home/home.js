@@ -154,6 +154,4 @@ const changeLang = function () {
     // addActiveClass();
 }
 
-module.exports = {
-    homeHtml
-};
+module.exports = homeHtml;
