@@ -1,13 +1,26 @@
+@import '../../utils/variables';
 .banner-contact {
-    background-color: #ececec;
+    background-color: $color-lightest-gray;
     justify-content: space-around;
-    color: gray;
+    color: $color-gray;
+    height: calc(100vh - 100px);
+    padding: 50px 0;
     &.banner--hidden {
         opacity: 0;
+    }
+    .banner-contact__logo-gray {
+        height: 50px;
+    }
+    .banner-contact__info-link {
+        font-size: 2em;
+        color: $color-gray;
+        font-weight: bold;
+        // text-decoration: none;
     }
 }
 
 .banner-contact__close-button {
     line-height: 0.75;
-    color: gray;
+    color: $color-gray;
+    margin-top: 0;
 }

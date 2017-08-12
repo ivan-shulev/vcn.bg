@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }, false);
     });
+    const linkButtons = document.querySelectorAll('.banner-contact__info-link');
+    for(const link of linkButtons) {
+        link.addEventListener('click', (e) => e.preventDefault());
+    }
 });
 
 module.exports = {
