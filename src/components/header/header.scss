@@ -3,6 +3,7 @@ $common-border: 1px solid $color-light-gray;
 
 body {
     &.menu--open {
+        overflow-x: hidden;
         .main-nav {
             left: 0;
         }
@@ -19,7 +20,7 @@ body {
             }
         }
         .js-content {
-            overflow-x: hidden;
+            // overflow-x: hidden;
             margin-left: 80vw;
         }
         &.bigger-width {
