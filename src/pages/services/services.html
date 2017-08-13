@@ -1,12 +1,32 @@
 <section class="services">
     <h4>{{content.header}}:</h4>
-    <p>{{{content.firstRow}}}</p>
-    <ul>
-        {{#content.servicesArray}}
-            <li>{{.}}</li>
-        {{/content.servicesArray}}
-    </ul>
-    <p>{{content.secondRow}}</p>
-    <p>{{content.thirdRow}}</p>
-    <p>{{content.fourthRow}}</p>
+    <div class="service-row">
+        <img src="images/services-general.svg" alt="Services icon">
+        <div class="service-row__content">
+            <p>{{{content.firstRow}}}:</p>
+            <ul>
+                {{#content.servicesArray}}
+                    <li>{{.}}</li>
+                {{/content.servicesArray}}
+            </ul>
+        </div>
+    </div>
+    <div class="service-row">
+        <img src="images/services-sks.svg" alt="SKS Services icon">
+        <div class="service-row__content">
+            <p>{{content.secondRow}}</p>
+        </div>
+    </div>
+    <div class="service-row">
+        <img src="images/consulting.svg" alt="Consulting icon">
+        <div class="service-row__content">
+            <p>{{content.thirdRow}}</p>
+        </div>
+    </div>
+    <div class="service-row">
+        <img src="images/maintenance.svg" alt="Maintenance icon">
+        <div class="service-row__content">
+            <p>{{content.fourthRow}}</p>
+        </div>
+    </div>
 </section>

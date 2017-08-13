@@ -1,0 +1,25 @@
+.service-row {
+    clear: right;
+    img {
+        width: 30px;
+        margin-top: 15px;
+    }
+    &:nth-of-type(2n) {
+        img {
+            margin-top: 18px;
+        }
+    }
+    ul {
+        padding-left: 10px;
+    }
+    li {
+        &:before {
+            content: '-';
+            margin-right: 5px;
+        }
+    }
+}
+.service-row__content {
+    float: right;
+    width: calc(100% - 40px);
+}
