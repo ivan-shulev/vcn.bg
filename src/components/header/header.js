@@ -14,6 +14,7 @@ function closeMenu() {
 
 const renderHtml = function () {
     renderMustache(initialHTML, { links: linkTranslations[language] }, mainNavContainer);
+    attachContactToggleToButton();
 }
 
 function showActiveLangButton(buttons) {
@@ -23,6 +24,17 @@ function showActiveLangButton(buttons) {
             button.classList.remove(hiddenClass);
         }
     }
+}
+
+function attachContactToggleToButton() {
+    const contactToggle = document.querySelector('.contact-toggle');
+    contactToggle.addEventListener('click', function(){
+        const contactModal = document.querySelector('.banner-contact');
+        bodyElement.classList.add('modal--open');
+        contactModal.classList.remove('banner--hidden');
+        contactModal.classList.remove('closed');
+        closeMenu();
+    });
 }
 
 document.addEventListener('changeLang', renderHtml);
@@ -45,14 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-    const contactToggle = document.querySelector('.contact-toggle');
-    contactToggle.addEventListener('click', function(){
-        const contactModal = document.querySelector('.banner-contact');
-        bodyElement.classList.add('modal--open');
-        contactModal.classList.remove('banner--hidden');
-        contactModal.classList.remove('closed');
-        closeMenu();
-    });
+    
     const hamburger = document.querySelector('.hamburger');
     const mainContentContainer = document.querySelector('.js-content');
     hamburger.addEventListener('click', function () {
