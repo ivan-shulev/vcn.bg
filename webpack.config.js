@@ -7,7 +7,7 @@ const path = require('path');
 const config = {
     entry: {
         main: './src/index.js',
-        vendor: ['navigo', 'mustache']
+        vendor: ['babel-polyfill', 'navigo', 'mustache']
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

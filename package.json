@@ -37,6 +37,7 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
     "bootstrap-material-design": "^0.5.10",
     "mustache": "^2.3.0",
     "navigo": "^5.2.0"
