@@ -18,12 +18,12 @@ const renderHtml = function () {
 }
 
 function showActiveLangButton(buttons) {
-    for (let button of buttons) {
+    buttons.forEach((button) => {
         const languageAttrValue = button.getAttribute('data-language');
         if(languageAttrValue !== language) {
             button.classList.remove(hiddenClass);
         }
-    }
+    });
 }
 
 function attachContactToggleToButton() {
@@ -43,8 +43,23 @@ document.addEventListener('DOMContentLoaded', function () {
     mainNavContainer = document.querySelector('[data-main-navigation-links]');
     initialHTML = mainNavContainer.innerHTML;
     renderHtml();
-    const langChangeButtons = document.querySelector('.lang-change-buttons').children;
-    for (let button of langChangeButtons) {
+    const langChangeButtons = Array.from(document.querySelector('.lang-change-buttons').children);
+    // for (const button of Object.entries(langChangeButtons)) {
+    //     console.log(button);
+    //     const languageAttrValue = button.getAttribute('data-language');
+    //     if(languageAttrValue !== language) {
+    //         button.classList.remove(hiddenClass);
+    //     }
+    //     button.addEventListener('click', function () {
+    //         if (languageAttrValue !== language) {
+    //             language = languageAttrValue;
+    //             button.classList.add(hiddenClass);
+    //             showActiveLangButton(langChangeButtons);
+    //         }
+    //     });
+    // }
+    langChangeButtons.forEach((button) => {
+        console.log(button);
         const languageAttrValue = button.getAttribute('data-language');
         if(languageAttrValue !== language) {
             button.classList.remove(hiddenClass);
@@ -56,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 showActiveLangButton(langChangeButtons);
             }
         });
-    }
+    });
     
     const hamburger = document.querySelector('.hamburger');
     const mainContentContainer = document.querySelector('.js-content');

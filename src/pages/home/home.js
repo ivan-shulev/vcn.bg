@@ -43,9 +43,7 @@ function changeActiveElement() {
 }
 
 function clearClassFromAll(itemList, classToRemove) {
-    for (const item of itemList) {
-        item.classList.remove(classToRemove);
-    }
+    itemList.array.forEach((item) => item.classList.remove(classToRemove));
 }
 
 function handleStart(ev) {

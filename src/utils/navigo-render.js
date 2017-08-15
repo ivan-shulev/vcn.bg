@@ -2,7 +2,7 @@ let _router;
 const bodyElement = document.querySelector('body');
 
 function renderNavigoLinks() {
-    const navigoLinks = document.querySelectorAll('[data-navigo]');
+    const navigoLinks = Array.from(document.querySelectorAll('[data-navigo]'));
     navigoLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
