@@ -5,7 +5,7 @@ body {
     &.menu--open {
         overflow-x: hidden;
         .main-nav {
-            transform: translate(-20px);
+            transform: translate(0);
         }
         .hamburger {
             .hamburger__stick:nth-child(2) {
@@ -24,7 +24,7 @@ body {
         }
         &.bigger-width {
             .js-content {
-                margin-left: 60vw;
+                transform: translate(60vw);
             }
             .main-nav {
                 width: 60vw;
@@ -80,7 +80,7 @@ $hamburger-stick-width: 35px;
     will-change: transform;
     transition: 0.3s transform;
     background: $color-lightest-gray;
-    margin-top: 49px;
+    margin-top: -1px;
     width: 80vw;
     border-right: $common-border;
     border-bottom: $common-border;
