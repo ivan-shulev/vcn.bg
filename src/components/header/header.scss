@@ -10,7 +10,6 @@ body {
         .hamburger {
             .hamburger__stick:nth-child(2) {
                 opacity: 0;
-                
             }
             .hamburger__stick:nth-child(1) {
                 transform: rotate(45deg) translate(7px, 9px);
@@ -64,10 +63,12 @@ $hamburger-stick-width: 35px;
     height: 3px;
     margin: 0 auto;
     background: $color-gray;
+    will-change: transform, opacity;
 }
 
 .js-content {
     transition: 0.3s transform;
+    will-change: transform;
     &.--to-right {
         width: 100vw;
     }
@@ -76,6 +77,7 @@ $hamburger-stick-width: 35px;
 .main-nav {
     position: absolute;
     transform: translate(-100vw);
+    will-change: transform;
     transition: 0.3s transform;
     background: $color-lightest-gray;
     margin-top: 49px;
