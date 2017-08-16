@@ -1,5 +1,7 @@
 import Navigo from 'navigo';
 
+import checkFlex from './utils/flex-check';
+
 import styles from './styles.scss';
 import homeHtml from './pages/home/home';
 import aboutHtml from './pages/about/about';
