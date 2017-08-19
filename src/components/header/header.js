@@ -4,12 +4,33 @@ import linkTranslations from './menu-translations';
 import setChangeLang from '../../utils/change-lang';
 import renderMustache from '../../utils/render-mustache';
 
-let mainNavContainer, initialHTML;
+let mainNavContainer, initialHTML, hamburger;
 const bodyElement = document.querySelector('body');
 const hiddenClass = 'hidden';
 
 function closeMenu() {
     bodyElement.classList.remove('menu--open');
+    document.removeEventListener('click', documentClick);
+}
+
+function getParentElements(element) {
+    const parentsArray = [];
+    while(element) {
+        parentsArray.push(element);
+        element = element.parentElement;
+    }
+    return parentsArray;
+}
+
+function documentClick(e) {
+    if(!bodyElement.classList.contains('menu--open') || getParentElements(e.target).reverse().includes(hamburger)) {
+        return;
+    }
+    closeMenu();
+}
+
+function addClickToClose() {
+    document.addEventListener('click', documentClick);
 }
 
 const renderHtml = function () {
@@ -44,22 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initialHTML = mainNavContainer.innerHTML;
     renderHtml();
     const langChangeButtons = Array.from(document.querySelector('.lang-change-buttons').children);
-    // for (const button of Object.entries(langChangeButtons)) {
-    //     console.log(button);
-    //     const languageAttrValue = button.getAttribute('data-language');
-    //     if(languageAttrValue !== language) {
-    //         button.classList.remove(hiddenClass);
-    //     }
-    //     button.addEventListener('click', function () {
-    //         if (languageAttrValue !== language) {
-    //             language = languageAttrValue;
-    //             button.classList.add(hiddenClass);
-    //             showActiveLangButton(langChangeButtons);
-    //         }
-    //     });
-    // }
     langChangeButtons.forEach((button) => {
-        console.log(button);
         const languageAttrValue = button.getAttribute('data-language');
         if(languageAttrValue !== language) {
             button.classList.remove(hiddenClass);
@@ -73,11 +79,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     
-    const hamburger = document.querySelector('.hamburger');
     const mainContentContainer = document.querySelector('.js-content');
+    hamburger = document.querySelector('.hamburger');
     hamburger.addEventListener('click', function () {
         bodyElement.classList.toggle('menu--open');
         mainContentContainer.classList.add('--to-right');
+        addClickToClose();
     });
     mainContentContainer.addEventListener('transitionend', (e) => {
         if(!bodyElement.classList.contains('menu--open')) {
