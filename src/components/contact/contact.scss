@@ -1,4 +1,11 @@
 @import '../../utils/variables';
+.no-flexbox {
+    .banner-contact__info-link {
+        display: block;
+        margin: 10vh 0;
+    }
+}
+
 .banner-contact {
     background-color: $color-lightest-gray;
     justify-content: space-around;
