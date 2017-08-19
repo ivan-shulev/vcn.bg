@@ -1,10 +1,11 @@
 import contactHtml from './contact.html';
 import './contact.scss';
+import clickEvent from '../../utils/click-event-setter';
 
 
 document.addEventListener('DOMContentLoaded', function () {
     const closeButton = document.querySelector('.banner-contact__close-button');
-    closeButton.addEventListener('click', function () {
+    closeButton.addEventListener(clickEvent, function () {
         const parent = closeButton.parentNode;
         document.querySelector('body').classList.remove('modal--open');
         parent.classList.add('closed');
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, false);
     });
     const linkButtons = Array.from(document.querySelectorAll('.banner-contact__info-link'));
-    linkButtons.forEach((link) => link.addEventListener('click', (e) => e.preventDefault()));
+    linkButtons.forEach((link) => link.addEventListener(clickEvent, (e) => e.preventDefault()));
 });
 
 module.exports = contactHtml;

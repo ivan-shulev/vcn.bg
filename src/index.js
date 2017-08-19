@@ -1,6 +1,7 @@
 import Navigo from 'navigo';
 
 import checkFlex from './utils/flex-check';
+import clickEvent from './utils/click-event-setter';
 
 import styles from './styles.scss';
 import homeHtml from './pages/home/home';
@@ -16,6 +17,12 @@ const clEvent = new Event('changeLang');
 const el = (sel) => document.querySelector(sel);
 const setContent = (id, content) => el('.js-content').innerHTML = content || el('#content-' + id).innerHTML;
 const bodyElement = el('body');
+
+function dispatchRouteChangeEvent(detail) {
+    const crEvent = new CustomEvent('changeRoute', { detail });
+    document.dispatchEvent(crEvent);
+}
+
 const varw = (function (context) {
     return function (varName, varValue) {
         let value = varValue;
@@ -29,11 +36,6 @@ const varw = (function (context) {
         });
     };
 })(window);
-
-function dispatchRouteChangeEvent(detail) {
-    const crEvent = new CustomEvent('changeRoute', { detail });
-    document.dispatchEvent(crEvent);
-}
 
 function handleRouting() {
     router = new Navigo();

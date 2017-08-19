@@ -1,5 +1,6 @@
 import loaderHtml from './loader.html';
 import loaderScss from './loader.scss';
+import clickEvent from '../../utils/click-event-setter';
 
 let initialX, initialY, slider;
 const touchMoveClass = 'initial-loader--touch-move';
@@ -38,7 +39,7 @@ function handleCloseModal(parent) {
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('body').classList.add('modal--open');
     const arrowButton = document.querySelector('.initial-loader__arrow-button');
-    arrowButton.addEventListener('click', function (ev) {
+    arrowButton.addEventListener(clickEvent, function (ev) {
         handleCloseModal(arrowButton.parentElement);
     });
 

@@ -3,6 +3,7 @@ import navScss from './header.scss';
 import linkTranslations from './menu-translations';
 import setChangeLang from '../../utils/change-lang';
 import renderMustache from '../../utils/render-mustache';
+import clickEvent from '../../utils/click-event-setter';
 
 let mainNavContainer, initialHTML, hamburger;
 const bodyElement = document.querySelector('body');
@@ -10,7 +11,7 @@ const hiddenClass = 'hidden';
 
 function closeMenu() {
     bodyElement.classList.remove('menu--open');
-    document.removeEventListener('click', documentClick);
+    document.removeEventListener(clickEvent, documentClick);
 }
 
 function getParentElements(element) {
@@ -30,7 +31,7 @@ function documentClick(e) {
 }
 
 function addClickToClose() {
-    document.addEventListener('click', documentClick);
+    document.addEventListener(clickEvent, documentClick);
 }
 
 const renderHtml = function () {
@@ -49,7 +50,7 @@ function showActiveLangButton(buttons) {
 
 function attachContactToggleToButton() {
     const contactToggle = document.querySelector('.contact-toggle');
-    contactToggle.addEventListener('click', function(){
+    contactToggle.addEventListener(clickEvent, function(){
         const contactModal = document.querySelector('.banner-contact');
         bodyElement.classList.add('modal--open');
         contactModal.classList.remove('banner--hidden');
@@ -70,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if(languageAttrValue !== language) {
             button.classList.remove(hiddenClass);
         }
-        button.addEventListener('click', function () {
+        button.addEventListener(clickEvent, function () {
             if (languageAttrValue !== language) {
                 language = languageAttrValue;
                 button.classList.add(hiddenClass);
@@ -81,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     const mainContentContainer = document.querySelector('.js-content');
     hamburger = document.querySelector('.hamburger');
-    hamburger.addEventListener('click', function () {
+    hamburger.addEventListener(clickEvent, function () {
         bodyElement.classList.toggle('menu--open');
         mainContentContainer.classList.add('--to-right');
         addClickToClose();
