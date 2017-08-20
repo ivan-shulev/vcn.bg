@@ -66,7 +66,7 @@ document.addEventListener('changeLang', renderHtml);
 
 document.addEventListener('DOMContentLoaded', function () {
     mainNavContainers = document.querySelectorAll('[data-main-navigation-links]');
-    mainNavContainers.forEach((html) => initialHTML.push(html.innerHTML));
+    Array.from(mainNavContainers).forEach((html) => initialHTML.push(html.innerHTML));
     renderHtml();
     const langChangeButtons = Array.from(document.querySelector('.lang-change-buttons').children);
     langChangeButtons.forEach((button) => {

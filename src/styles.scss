@@ -143,3 +143,15 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
+.no-flexbox {
+    footer {
+        left: 0;
+    }
+    .footer-content {
+        display: block;
+        span:last-of-type {
+            float: right;
+        }
+    }
+}

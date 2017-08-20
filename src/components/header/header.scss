@@ -133,4 +133,13 @@ header {
         min-width: 240px;
         text-align: right;
     }
+    .no-flexbox {
+        .logo-gray {
+            float: left;
+            margin-right: 50px;
+        }
+        .header__navigation {
+            vertical-align: middle;
+        }
+    }
 }

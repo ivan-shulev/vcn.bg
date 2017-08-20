@@ -11,14 +11,21 @@
 
 .projects {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    max-width: 100%;
     justify-content: space-between;
 }
 
 .project-navigation {
     position: absolute;
+}
+
+.no-flexbox {
+    .projects {
+        display: initial;
+        &:after {
+            clear: both;
+        }
+    }
 }
 
 @media screen and (min-width: 480px) and (max-width: 769px) {
@@ -37,13 +44,23 @@
 
 @media screen and (min-width: 770px) {
     .project {
-        max-width: 44%;
+        flex-basis: calc(50% - 50px);
         min-width: initial;
     }
 }
 
 @media screen and (min-width: 940px) {
     .project {
-        max-width: 28%;
+        flex-basis: calc(100%/3 - 50px);
+    }
+    .no-flexbox {
+       .project {
+            float: left;
+            max-width: 27%;
+            margin-right: 3%;
+        }
+        .project:nth-of-type(3n) {
+            margin-right: 0;
+        }
     }
 }
