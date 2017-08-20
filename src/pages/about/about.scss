@@ -1,0 +1,15 @@
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media screen and (min-width: 450px) {
+        &> div {
+            flex-basis: calc(50% - 10px);
+        }
+    }
+    @media screen and (min-width: 900px) {
+        &> div {
+            flex-basis: calc(100%/3 - 40px/3);
+        }
+    }
+}
