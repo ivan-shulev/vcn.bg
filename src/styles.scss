@@ -5,6 +5,9 @@
 }
 
 @media screen and (min-width: 770px) {
+    .js-content.container {
+        padding-bottom: 70px;
+    }
     .hidden-s {
         display: initial;
     }
