@@ -1,4 +1,26 @@
 @import '/utils/variables';
+
+.hidden-s {
+    display: none;
+}
+
+@media screen and (min-width: 770px) {
+    .hidden-s {
+        display: initial;
+    }
+    .visible-s {
+        display: none;
+    }
+    .container {
+        .hidden-s {
+            display: initial;
+        }
+        .visible-s {
+            display: none;
+        }
+    }
+}
+
 html {
     overflow-x: hidden;
     touch-action: manipulation;
@@ -104,29 +126,17 @@ button {
     }
 }
 
-.hidden-s {
-    display: none;
-}
-
 footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
     background: $color-lightest-gray;
     border-bottom: $common-border;
-    padding: 20px 0;
 }
 
-@media screen and (min-width: 770px) {
-    .hidden-s {
-        display: initial;
-    }
-    .visible-s {
-        display: none;
-    }
-    .container {
-        .hidden-s {
-            display: initial;
-        }
-        .visible-s {
-            display: none;
-        }
-    }
+.footer-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
