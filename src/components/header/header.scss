@@ -1,5 +1,4 @@
 @import '../../utils/variables';
-$common-border: 1px solid $color-light-gray;
 
 body {
     &.menu--open {
@@ -114,4 +113,11 @@ header {
 .header__container {
     display: flex;
     justify-content: space-between;
+}
+
+.header__navigation {
+    margin: 0;
+    li {
+        display: inline;
+    }
 }

@@ -5,7 +5,7 @@ import setChangeLang from '../../utils/change-lang';
 import renderMustache from '../../utils/render-mustache';
 import clickEvent from '../../utils/click-event-setter';
 
-let mainNavContainer, initialHTML, hamburger;
+let mainNavContainers, initialHTML = [], hamburger;
 const bodyElement = document.querySelector('body');
 const hiddenClass = 'hidden';
 
@@ -35,7 +35,10 @@ function addClickToClose() {
 }
 
 const renderHtml = function () {
-    renderMustache(initialHTML, { links: linkTranslations[language] }, mainNavContainer);
+    initialHTML.forEach((html, index) => {
+        console.log(html);
+        renderMustache(html, { links: linkTranslations[language] }, mainNavContainers[index]);
+    });
     attachContactToggleToButton();
 }
 
@@ -62,8 +65,8 @@ function attachContactToggleToButton() {
 document.addEventListener('changeLang', renderHtml);
 
 document.addEventListener('DOMContentLoaded', function () {
-    mainNavContainer = document.querySelector('[data-main-navigation-links]');
-    initialHTML = mainNavContainer.innerHTML;
+    mainNavContainers = document.querySelectorAll('[data-main-navigation-links]');
+    mainNavContainers.forEach((html) => initialHTML.push(html.innerHTML));
     renderHtml();
     const langChangeButtons = Array.from(document.querySelector('.lang-change-buttons').children);
     langChangeButtons.forEach((button) => {

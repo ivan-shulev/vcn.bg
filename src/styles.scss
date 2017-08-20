@@ -1,3 +1,4 @@
+@import '/utils/variables';
 html {
     overflow-x: hidden;
     touch-action: manipulation;
@@ -100,5 +101,32 @@ button {
     100% {
         opacity: 0;
         margin-left: 0;
+    }
+}
+
+.hidden-s {
+    display: none;
+}
+
+footer {
+    background: $color-lightest-gray;
+    border-bottom: $common-border;
+    padding: 20px 0;
+}
+
+@media screen and (min-width: 770px) {
+    .hidden-s {
+        display: initial;
+    }
+    .visible-s {
+        display: none;
+    }
+    .container {
+        .hidden-s {
+            display: initial;
+        }
+        .visible-s {
+            display: none;
+        }
     }
 }

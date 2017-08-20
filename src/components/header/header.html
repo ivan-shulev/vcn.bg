@@ -1,9 +1,16 @@
 <header>
     <div class="container header__container">
-        <div class="hamburger">
+        <div class="hamburger visible-s">
             <span class="hamburger__stick"></span>
             <span class="hamburger__stick"></span>
             <span class="hamburger__stick"></span>
+        </div>
+        <div class="hidden-s">
+            <ul class="header__navigation" data-main-navigation-links>
+                <li><a href="about" data-navigo>{{links.firstLink}}</a></li>
+                <li><a href="projects" data-navigo>{{links.secondLink}}</a></li>
+                <li><a href="services" data-navigo>{{links.thirdLink}}</a></li>
+            </ul>
         </div>
         <img src="images/logo-gray.svg" class="logo-gray" alt="VCN logo gray">
         <div class="lang-change-buttons">
@@ -12,7 +19,7 @@
         </div>
     </div>
 </header>
-<nav role="main" class="main-nav">
+<nav role="main" class="main-nav visible-s">
     <ul data-main-navigation-links>
         <li><a href="about" data-navigo>{{links.firstLink}}</a></li>
         <li><a href="projects" data-navigo>{{links.secondLink}}</a></li>
