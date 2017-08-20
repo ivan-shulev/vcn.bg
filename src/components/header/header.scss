@@ -52,7 +52,6 @@ $hamburger-stick-width: 35px;
     flex-direction: column;
     justify-content: space-between;
     height: 25px;
-    align-self: center;
 }
 
 .hamburger__stick {
@@ -101,7 +100,6 @@ $hamburger-stick-width: 35px;
 
 .logo-gray {
     height: 25px;
-    align-self: center;
 }
 
 header {
@@ -113,11 +111,26 @@ header {
 .header__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header__navigation {
     margin: 0;
+    padding-left: 0;
+    min-width: 240px;
     li {
         display: inline;
+        margin-right: 20px;
+    }
+    a {
+        color: $color-gray;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 770px) {
+    .lang-change-buttons {
+        min-width: 240px;
+        text-align: right;
     }
 }
