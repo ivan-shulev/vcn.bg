@@ -14,7 +14,7 @@ document.addEventListener('changeRoute', function (e) {
     if(e.detail !== 'services') {
         return;
     }
-    servicesContainer = document.querySelector('.services');
+    servicesContainer = document.querySelector('[data-content-services]');
     initialHTML = servicesContainer.innerHTML;
     renderHtml();
     setChangeLang(renderHtml, 'services');

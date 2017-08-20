@@ -1,32 +1,34 @@
-<section class="services">
+<section data-content-services>
     <h4>{{content.header}}:</h4>
-    <div class="service-row">
-        <img src="images/services-general.svg" alt="Services icon">
-        <div class="service-row__content">
-            <p>{{{content.firstRow}}}:</p>
-            <ul>
-                {{#content.servicesArray}}
-                    <li>{{.}}</li>
-                {{/content.servicesArray}}
-            </ul>
+    <div class="services">
+        <div class="service-row">
+            <img src="images/services-general.svg" alt="Services icon">
+            <div class="service-row__content">
+                <p>{{{content.firstRow}}}:</p>
+                <ul>
+                    {{#content.servicesArray}}
+                        <li>{{.}}</li>
+                    {{/content.servicesArray}}
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="service-row">
-        <img src="images/services-sks.svg" alt="SKS Services icon">
-        <div class="service-row__content">
-            <p>{{content.secondRow}}</p>
+        <div class="service-row">
+            <img src="images/services-sks.svg" alt="SKS Services icon">
+            <div class="service-row__content">
+                <p>{{content.secondRow}}</p>
+            </div>
         </div>
-    </div>
-    <div class="service-row">
-        <img src="images/consulting.svg" alt="Consulting icon">
-        <div class="service-row__content">
-            <p>{{content.thirdRow}}</p>
+        <div class="service-row">
+            <img src="images/consulting.svg" alt="Consulting icon">
+            <div class="service-row__content">
+                <p>{{content.thirdRow}}</p>
+            </div>
         </div>
-    </div>
-    <div class="service-row">
-        <img src="images/maintenance.svg" alt="Maintenance icon">
-        <div class="service-row__content">
-            <p>{{content.fourthRow}}</p>
+        <div class="service-row">
+            <img src="images/maintenance.svg" alt="Maintenance icon">
+            <div class="service-row__content">
+                <p>{{content.fourthRow}}</p>
+            </div>
         </div>
     </div>
 </section>
