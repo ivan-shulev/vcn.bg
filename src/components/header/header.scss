@@ -69,9 +69,6 @@ $hamburger-stick-width: 35px;
 .js-content {
     transition: 0.3s transform;
     will-change: transform;
-    &.--to-right {
-        width: 100vw;
-    }
 }
 
 .main-nav {
@@ -109,9 +106,12 @@ $hamburger-stick-width: 35px;
 }
 
 header {
+    background: $color-lightest-gray;
+    border-bottom: $common-border;
+    padding: 20px 0;
+}
+
+.header__container {
     display: flex;
     justify-content: space-between;
-    background: $color-lightest-gray;
-    padding: 15px 20px;
-    border-bottom: $common-border;
 }

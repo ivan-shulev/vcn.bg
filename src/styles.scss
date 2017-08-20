@@ -16,8 +16,10 @@ body {
     color: #3a3a3a;
 }
 
-section:not(.banner) {
-    padding: 20px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .banner {
