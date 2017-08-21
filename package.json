@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open",
-    "build": "rm -r dist&&NODE_ENV='production' webpack -p"
+    "build": "rm -r dist&&NODE_ENV='production' webpack --optimize-minimize --define process.env.NODE_ENV='production'"
   },
   "repository": {
     "type": "git",
