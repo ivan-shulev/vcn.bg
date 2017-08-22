@@ -87,13 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     hamburger = document.querySelector('.hamburger');
     hamburger.addEventListener(clickEvent, function () {
         bodyElement.classList.toggle('menu--open');
-        mainContentContainer.classList.add('--to-right');
         addClickToClose();
-    });
-    mainContentContainer.addEventListener('transitionend', (e) => {
-        if(!bodyElement.classList.contains('menu--open')) {
-            mainContentContainer.classList.remove('--to-right');
-        }
     });
 });
 
