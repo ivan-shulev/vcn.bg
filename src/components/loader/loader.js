@@ -10,7 +10,7 @@ function handleMove(ev) {
     if (pixelsMoved > 0) {
         return;
     }
-    slider.style['margin-top'] = pixelsMoved + 'px';
+    slider.style['transform'] = 'translate(0, ' + pixelsMoved + 'px)';
 }
 
 function handleStart(ev) {
@@ -21,7 +21,7 @@ function handleStart(ev) {
 
 function handleEnd(ev) {
     slider.classList.remove(touchMoveClass);
-    slider.style['margin-top'] = null;
+    slider.style['transform'] = null;
     if (slider.clientHeight / 3 < (initialY - ev.changedTouches[0].pageY)) {
         handleCloseModal(slider);
     }
