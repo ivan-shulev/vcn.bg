@@ -36,7 +36,6 @@ function addClickToClose() {
 
 const renderHtml = function () {
     initialHTML.forEach((html, index) => {
-        console.log(html);
         renderMustache(html, { links: linkTranslations[language] }, mainNavContainers[index]);
     });
     attachContactToggleToButton();

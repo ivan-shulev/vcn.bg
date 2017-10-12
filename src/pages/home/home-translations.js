@@ -5,7 +5,7 @@ import infinityTowerImg from './images/projects/infinity-tower.jpg';
 import vMwareImg from './images/projects/vmware.jpg';
 import sanStefanoImg from './images/projects/san-stefano-sofia.jpg';
 import novotelImg from './images/projects/novotel.jpg';
-import rnmImg from './images/projects/r&m-sofia.jpg';
+import rnmImg from './images/projects/rnm-sofia.jpg';
 import serdicaImg from './images/projects/serdica-center.jpg';
 import litexTowerImg from './images/projects/litex-tower-project.jpg';
 import centillionImg from './images/projects/centillion.jpg';
