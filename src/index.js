@@ -53,6 +53,10 @@ function handleRouting() {
                 setContent('Home', homeHtml);
                 dispatchRouteChangeEvent('home');
             },
+            'contact': () => {
+                setContent('Contact', contactHtml);
+                dispatchRouteChangeEvent('contact');
+            },
             '*': () => {
                 setContent('Home', homeHtml);
                 dispatchRouteChangeEvent('home');
