@@ -2,17 +2,17 @@ import contactHtml from './contact.html';
 import './contact.scss';
 import clickEvent from '../../utils/click-event-setter';
 
-function initMap() {
-    var uluru = { lat: -25.363, lng: 131.044 };
+window.initMap = function() {
+    var uluru = { lat: 42.679069, lng: 23.367509 };
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
+        zoom: 17,
         center: uluru
     });
     var marker = new google.maps.Marker({
         position: uluru,
         map: map
     });
-}
+};
 
 function appendScriptToDom(src) {
     const script = document.createElement('script');
