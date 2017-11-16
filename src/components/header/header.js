@@ -38,7 +38,6 @@ const renderHtml = function () {
     initialHTML.forEach((html, index) => {
         renderMustache(html, { links: linkTranslations[language] }, mainNavContainers[index]);
     });
-    attachContactToggleToButton();
 }
 
 function showActiveLangButton(buttons) {
@@ -47,17 +46,6 @@ function showActiveLangButton(buttons) {
         if(languageAttrValue !== language) {
             button.classList.remove(hiddenClass);
         }
-    });
-}
-
-function attachContactToggleToButton() {
-    const contactToggle = document.querySelector('.contact-toggle');
-    contactToggle.addEventListener(clickEvent, function(){
-        const contactModal = document.querySelector('.banner-contact');
-        bodyElement.classList.add('modal--open');
-        contactModal.classList.remove('banner--hidden');
-        contactModal.classList.remove('closed');
-        closeMenu();
     });
 }
 

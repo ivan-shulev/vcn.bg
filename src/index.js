@@ -69,7 +69,6 @@ varw('language', 'bulgarian');
 
 bodyElement.innerHTML = headerHtml + bodyElement.innerHTML;
 bodyElement.innerHTML += loaderHtml;
-bodyElement.innerHTML += contactHtml;
 
 function isViewHeightBigger() {
     return window.innerHeight > window.innerWidth;
