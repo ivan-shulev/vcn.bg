@@ -1,11 +1,22 @@
+import renderMustache from '../../utils/render-mustache';
+import setChangeLang from '../../utils/change-lang';
 import contactHtml from './contact.html';
 import './contact.scss';
 import clickEvent from '../../utils/click-event-setter';
 import pin from './vcn-pin.png';
+import contactTranslations from './contact-translations';
+
+let gmapsScriptPresent = false;
+let contactContainer, initialHTML;
+
+const renderHtml = function () {
+    renderMustache(initialHTML, { content: contactTranslations[language] }, contactContainer);
+}
 
 // Need to make initMap globally available, for the maps callback
 window.initMap = function() {
-    const info = '<h4 class="text-center">VCN office</h4><p>Number 106</p>';
+    const info =
+        '<h4>VCN office</h4><p>бул. "Шипченски проход" 63, офис 106</p>';
     const vcnOfficeLocation = { lat: 42.679069, lng: 23.367509 };
     const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 17,
@@ -34,33 +45,18 @@ document.addEventListener('changeRoute', function(e) {
     if (e.detail !== 'contact') {
         return;
     }
-    appendScriptToDom(
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyBy7Zpp8CMm-i_HKcb7XavqFF41xizjlz0&callback=initMap'
-    );
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    // const closeButton = document.querySelector('.banner-contact__close-button');
-    // closeButton.addEventListener(clickEvent, function() {
-    //     const parent = closeButton.parentNode;
-    //     document.querySelector('body').classList.remove('modal--open');
-    //     parent.classList.add('closed');
-    //     parent.addEventListener(
-    //         'transitionend',
-    //         function(event) {
-    //             if (parent.classList.contains('closed')) {
-    //                 parent.classList.add('banner--hidden');
-    //             }
-    //         },
-    //         false
-    //     );
-    // });
-    // const linkButtons = Array.from(
-    //     document.querySelectorAll('.banner-contact__info-link')
-    // );
-    // linkButtons.forEach(link =>
-    //     link.addEventListener(clickEvent, e => e.preventDefault())
-    // );
+    if (gmapsScriptPresent) {
+        initMap();
+    } else {
+        gmapsScriptPresent = true;
+        appendScriptToDom(
+            'https://maps.googleapis.com/maps/api/js?key=AIzaSyBy7Zpp8CMm-i_HKcb7XavqFF41xizjlz0&callback=initMap'
+        );
+    }
+    contactContainer = document.querySelector('.contact-info');
+    initialHTML = contactContainer.innerHTML;
+    renderHtml();
+    setChangeLang(renderHtml, 'contact');
 });
 
 module.exports = contactHtml;
