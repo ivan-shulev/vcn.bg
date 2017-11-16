@@ -1,16 +1,26 @@
 import contactHtml from './contact.html';
 import './contact.scss';
 import clickEvent from '../../utils/click-event-setter';
+import pin from './vcn-pin.png';
 
+// Need to make initMap globally available, for the maps callback
 window.initMap = function() {
-    var uluru = { lat: 42.679069, lng: 23.367509 };
-    var map = new google.maps.Map(document.getElementById('map'), {
+    const info = '<h4 class="text-center">VCN office</h4><p>Number 106</p>';
+    const vcnOfficeLocation = { lat: 42.679069, lng: 23.367509 };
+    const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 17,
-        center: uluru
+        center: vcnOfficeLocation
     });
-    var marker = new google.maps.Marker({
-        position: uluru,
-        map: map
+    const infowindow = new google.maps.InfoWindow({
+        content: info
+    });
+    const marker = new google.maps.Marker({
+        position: vcnOfficeLocation,
+        map: map,
+        icon: pin
+    });
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
     });
 };
 

@@ -1,13 +1,11 @@
 @import '../../utils/variables';
-.no-flexbox {
-    .banner-contact__info-link {
-        display: block;
-        margin: 10vh 0;
-    }
+
+.contact {
+    padding-top: 20px;
 }
 
 #map {
     width: 100%;
-    height: 100vh;
+    height: 400px;
     background-color: grey;
 }
