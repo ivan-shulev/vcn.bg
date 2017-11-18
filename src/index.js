@@ -7,9 +7,9 @@ import styles from './styles.scss';
 import homeHtml from './pages/home/home';
 import aboutHtml from './pages/about/about';
 import servicesHtml from './pages/services/services';
+import contactHtml from './pages/contact/contact';
 import loaderHtml from './components/loader/loader';
 import headerHtml from './components/header/header';
-import contactHtml from './components/contact/contact';
 import { initialNavigoRender } from './utils/navigo-render';
 
 let router;
