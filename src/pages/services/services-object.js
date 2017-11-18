@@ -1,7 +1,9 @@
 const english = {
-    header: 'We are very good at',
+    header: 'What we offer',
     firstRow: 'Design, implementation and <strong>launch</strong> of',
     servicesArray: [
+        'BMS',
+        'SOT',
         'Access Control',
         'Fire alarm systems',
         'Public address systems',
@@ -13,12 +15,14 @@ const english = {
 };
 
 const bulgarian = {
-    header: 'Много сме добри с',
+    header: 'Какво предлагаме',
     firstRow: 'Проектиране, изграждане и <strong>пускове</strong> на',
     servicesArray: [
+        'БМС',
+        'СОТ',
         'Контрол на достъп',
         'Пожароизвестяване',
-        'Озвучаване и оповестяване',
+        'Аварийно оповестяване',
         'Видеонаблюдение'
     ],
     secondRow: 'Проектиране, изграждане и сертифициране на СКС',
