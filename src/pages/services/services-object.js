@@ -2,12 +2,12 @@ const english = {
     header: 'What we offer',
     firstRow: 'Design, implementation and <strong>launch</strong> of',
     servicesArray: [
-        'BMS',
-        'SOT',
+        'Intrusion systems',
         'Access Control',
         'Fire alarm systems',
         'Public address systems',
-        'Surveillance'
+        'CCTV',
+        'BMS'
     ],
     secondRow: 'Design, implementation and certification of SKS',
     thirdRow: 'Consulting Services',
@@ -18,12 +18,12 @@ const bulgarian = {
     header: 'Какво предлагаме',
     firstRow: 'Проектиране, изграждане и <strong>пускове</strong> на',
     servicesArray: [
-        'БМС',
         'СОТ',
         'Контрол на достъп',
         'Пожароизвестяване',
         'Аварийно оповестяване',
-        'Видеонаблюдение'
+        'Видеонаблюдение',
+        'БМС'
     ],
     secondRow: 'Проектиране, изграждане и сертифициране на СКС',
     thirdRow: 'Консултантски услуги',

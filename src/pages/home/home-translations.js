@@ -23,21 +23,21 @@ const english = {
             image: capitalFortImg,
             name: 'Capital Fort',
             services: [
-                'SKS', 'Access Control', 'Fire alarm systems', 'Surveillance'
+                'SKS', 'Access Control', 'Fire alarm systems', 'CCTV', 'Systems launch'
             ]
         },
         {
             image: osramImg,
             name: 'Osram',
             services: [
-                'SKS', 'Access Control', 'Fire alarm systems', 'Surveillance', 'Public Address systems', 'Systems launch'
+                'SKS', 'Access Control', 'Fire alarm systems', 'CCTV', 'Public Address systems', 'Systems launch'
             ]
         },
         {
             image: infinityTowerImg,
             name: 'Infinity tower',
             services: [
-                'SKS', 'Access Control', 'Fire alarm systems', 'Surveillance', 'Public Address systems', 'Systems launch'
+                'SKS', 'Access Control', 'Fire alarm systems', 'CCTV', 'Public Address systems', 'Systems launch'
             ]
         },
         {
@@ -51,56 +51,56 @@ const english = {
             image: sanStefanoImg,
             name: 'San Stefano Plaza',
             services: [
-                'BIS', 'SOT', 'Access Control', 'Fire alarm systems', 'Surveillance', 'Public Address systems', 'Systems launch'
+                'BIS', 'Intrusion systems', 'Access Control', 'Fire alarm systems', 'CCTV', 'Public Address systems', 'Systems launch'
             ]
         },
         {
             image: novotelImg,
             name: 'Novotel',
             services: [
-                'BIS', 'SOT', 'Access Control', 'Fire alarm systems', 'Surveillance', 'Public Address systems', 'Systems launch'
+                'BIS', 'Intrusion systems', 'Access Control', 'Fire alarm systems', 'CCTV', 'Public Address systems', 'Systems launch'
             ]
         },
         {
             image: rnmImg,
             name: 'R&M Bulgaria',
             services: [
-                'Fire alarm systems', 'Public Address systems', 'Systems launch', 'Surveillance', 'Access Control'
+                'Fire alarm systems', 'Public Address systems', 'Systems launch', 'CCTV', 'Access Control'
             ]
         },
         {
             image: serdicaImg,
             name: 'Serdica Center - offices',
             services: [
-                'Access Control', 'Fire alarm systems', 'Surveillance', 'Public Address systems'
+                'Access Control', 'Fire alarm systems', 'CCTV', 'Public Address systems', 'Systems launch'
             ]
         },
         {
             image: litexTowerImg,
             name: 'Litex Tower',
             services: [
-                'Access Control', 'BMS', 'Surveillance', 'SKS', 'Systems launch'
+                'Access Control', 'BMS', 'CCTV', 'SKS', 'Systems launch'
             ]
         },
         {
             image: centillionImg,
             name: 'Centillion',
             services: [
-                'Access Control', 'Surveillance', 'SKS', 'Fire alarm systems', 'Systems launch'
+                'Access Control', 'CCTV', 'SKS', 'Fire alarm systems', 'Systems launch'
             ]
         },
         {
             image: benchmarkImg,
             name: 'Benchmark',
             services: [
-                'SKS', 'Access Control', 'Public Address systems', 'Surveillance'
+                'SKS', 'Access Control', 'Public Address systems', 'CCTV'
             ]
         },
         {
             image: pravecImg,
             name: 'Hotel Riu Pravets Resort',
             services: [
-                'SKS', 'Public Address systems', 'Surveillance'
+                'SKS', 'Public Address systems', 'CCTV'
             ]
         },
         {
@@ -128,7 +128,7 @@ const english = {
             image: residentialParkImg,
             name: 'Residential Park Sofia',
             services: [
-                'SKS', 'Surveillance'
+                'SKS', 'CCTV'
             ]
         },
         {
@@ -148,7 +148,7 @@ const bulgarian = {
             image: capitalFortImg,
             name: 'Capital Fort',
             services: [
-                'СКС', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение'
+                'СКС', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Пускове на системи'
             ]
         },
         {
@@ -197,7 +197,7 @@ const bulgarian = {
             image: serdicaImg,
             name: 'Serdica Center - offices',
             services: [
-                'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Аварийно оповестяване'
+                'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Аварийно оповестяване', 'Пускове на системи'
             ]
         },
         {
