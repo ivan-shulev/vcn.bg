@@ -15,6 +15,7 @@ import megaParkImg from './images/projects/sofia-megapark.jpg';
 import radugaImg from './images/projects/radoga-kamchiq.jpg';
 import residentialParkImg from './images/projects/residential-park-sofia.jpg';
 import theMallImg from './images/projects/the-mall-sofia.jpg';
+import expo2000 from './images/projects/expo-2000.jpg';
 
 const english = {
     title: 'Completed projects',
@@ -23,98 +24,105 @@ const english = {
             image: capitalFortImg,
             name: 'Capital Fort',
             services: [
-                'SKS', 'Access Control', 'Fire alarm systems', 'CCTV', 'Systems launch'
+                'Structured cabling systems', 'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Engineering and commissioning of the listed systems and solutions'
+            ]
+        },
+        {
+            image: expo2000,
+            name: 'Expo 2000 - Phase 3 and 4',
+            services: [
+                'Structured cabling systems', 'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Intrusion systems', 'Audio-video intercom systems', 'Engineering and commissioning of the listed systems and solutions'
             ]
         },
         {
             image: osramImg,
-            name: 'Osram',
+            name: 'Factory "Osram" - Plovdiv',
             services: [
-                'SKS', 'Access Control', 'Fire alarm systems', 'CCTV', 'Public Address systems', 'Systems launch'
+                'Structured cabling systems', 'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Engineering and commissioning of the listed systems and solutions'
             ]
         },
         {
             image: infinityTowerImg,
             name: 'Infinity tower',
             services: [
-                'SKS', 'Access Control', 'Fire alarm systems', 'CCTV', 'Public Address systems', 'Systems launch'
+                'Structured cabling systems', 'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Engineering and commissioning of the listed systems and solutions'
             ]
         },
         {
             image: vMwareImg,
             name: 'VMware',
             services: [
-                'SKS'
+                'Structured cabling systems'
             ]
         },
         {
             image: sanStefanoImg,
             name: 'San Stefano Plaza',
             services: [
-                'BIS', 'Intrusion systems', 'Access Control', 'Fire alarm systems', 'CCTV', 'Public Address systems', 'Systems launch'
+                'Software platforms for integration of security systems', 'Intrusion systems', 'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Audio-video intercom systems', 'Engineering and commissioning of the listed systems and solutions'
             ]
         },
         {
             image: novotelImg,
             name: 'Novotel',
             services: [
-                'BIS', 'Intrusion systems', 'Access Control', 'Fire alarm systems', 'CCTV', 'Public Address systems', 'Systems launch'
+                'Software platforms for integration of security systems', 'Intrusion systems', 'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Engineering and commissioning of the listed systems and solutions'
             ]
         },
         {
             image: rnmImg,
             name: 'R&M Bulgaria',
             services: [
-                'Fire alarm systems', 'Public Address systems', 'Systems launch', 'CCTV', 'Access Control'
+                'Fire alarm systems', 'Public address systems', 'CCTV', 'Access control', 'Engineering and commissioning of the listed systems and solutions'
             ]
         },
         {
             image: serdicaImg,
             name: 'Serdica Center - offices',
             services: [
-                'Access Control', 'Fire alarm systems', 'CCTV', 'Public Address systems', 'Systems launch'
+                'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Engineering and commissioning of the listed systems and solutions'
             ]
         },
         {
             image: litexTowerImg,
             name: 'Litex Tower',
             services: [
-                'Access Control', 'BMS', 'CCTV', 'SKS', 'Systems launch'
+                'Access control', 'BMS', 'CCTV', 'Structured cabling systems', 'Engineering and commissioning of the listed systems and solutions'
             ]
         },
         {
             image: centillionImg,
             name: 'Centillion',
             services: [
-                'Access Control', 'CCTV', 'SKS', 'Fire alarm systems', 'Systems launch'
+                'Access control', 'CCTV', 'Structured cabling systems', 'Fire alarm systems', 'Engineering and commissioning of the listed systems and solutions'
             ]
         },
         {
             image: benchmarkImg,
             name: 'Benchmark',
             services: [
-                'SKS', 'Access Control', 'Public Address systems', 'CCTV'
+                'Structured cabling systems', 'Access control', 'Public address systems', 'CCTV'
             ]
         },
         {
             image: pravecImg,
             name: 'Hotel Riu Pravets Resort',
             services: [
-                'SKS', 'Public Address systems', 'CCTV'
+                'Structured cabling systems', 'Public address systems', 'CCTV'
             ]
         },
         {
             image: sofiaAirportTowerImg,
             name: 'Sofia Airport Tower',
             services: [
-                'SKS', 'Public Address systems'
+                'Structured cabling systems', 'Public address systems'
             ]
         },
         {
             image: megaParkImg,
             name: 'Mega Park Sofia',
             services: [
-                'SKS'
+                'Structured cabling systems'
             ]
         },
         {
@@ -128,14 +136,14 @@ const english = {
             image: residentialParkImg,
             name: 'Residential Park Sofia',
             services: [
-                'SKS', 'CCTV'
+                'Structured cabling systems', 'CCTV'
             ]
         },
         {
             image: theMallImg,
             name: 'The Mall',
             services: [
-                'SKS', 'Fire alarm systems', 'Access Control', 'Public Address systems'
+                'Structured cabling systems', 'Fire alarm systems', 'Access control', 'Public address systems'
             ]
         }
     ]
@@ -148,98 +156,105 @@ const bulgarian = {
             image: capitalFortImg,
             name: 'Capital Fort',
             services: [
-                'СКС', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Пускове на системи'
+                'Структурни кабелни системи', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
+            ]
+        },
+        {
+            image: expo2000,
+            name: 'Expo 2000 - Фаза 3 и 4',
+            services: [
+                'Структурни кабелни системи', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Сигнално-охранителна система', 'Аудио-видео интерком', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
             ]
         },
         {
             image: osramImg,
-            name: 'Осрам',
+            name: 'Завод "Осрам" - гр. Пловдив',
             services: [
-                'СКС', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Аварийно оповестяване', 'Пускове на системи'
+                'Структурни кабелни системи', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
             ]
         },
         {
             image: infinityTowerImg,
             name: 'Infinity Tower',
             services: [
-                'СКС', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Аварийно оповестяване', 'Пускове на системи'
+                'Структурни кабелни системи', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
             ]
         },
         {
             image: vMwareImg,
             name: 'VMware',
             services: [
-                'СКС'
+                'Структурни кабелни системи'
             ]
         },
         {
             image: sanStefanoImg,
             name: 'Сан Стефано Плаза',
             services: [
-                'БИС', 'СОТ', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Аварийно оповестяване', 'Пускове на системи'
+                'Софтуерна платформа за интеграция на системи за охрана', 'Сигнално-охранителна система', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Аудио-видео интерком', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
             ]
         },
         {
             image: novotelImg,
             name: 'Novotel',
             services: [
-                'БИС', 'СОТ', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Аварийно оповестяване', 'Пускове на системи'
+                'Софтуерна платформа за интеграция на системи за охрана', 'Сигнално-охранителна система', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
             ]
         },
         {
             image: rnmImg,
             name: 'R&M Bulgaria',
             services: [
-                'Пожароизвестителна система', 'Аварийно оповестяване', 'Пускове на системи', 'Видеонаблюдение', 'Контрол на достъпа'
+                'Пожароизвестителна система', 'Aварийно оповестяване и Озвучаване', 'Видеонаблюдение', 'Контрол на достъпа', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
             ]
         },
         {
             image: serdicaImg,
             name: 'Serdica Center - offices',
             services: [
-                'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Аварийно оповестяване', 'Пускове на системи'
+                'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
             ]
         },
         {
             image: litexTowerImg,
             name: 'Litex Tower',
             services: [
-                'Контрол на достъпа', 'БМС', 'Видеонаблюдение', 'СКС', 'Пускове на системи'
+                'Контрол на достъпа', 'БМС', 'Видеонаблюдение', 'Структурни кабелни системи', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
             ]
         },
         {
             image: centillionImg,
             name: 'Centillion',
             services: [
-                'Контрол на достъпа', 'Видеонаблюдение', 'СКС', 'Пожароизвестителна система', 'Пускове на системи'
+                'Контрол на достъпа', 'Видеонаблюдение', 'Структурни кабелни системи', 'Пожароизвестителна система', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
             ]
         },
         {
             image: benchmarkImg,
             name: 'Benchmark',
             services: [
-                'СКС', 'Контрол на достъпа', 'Аварийно оповестяване', 'Видеонаблюдение'
+                'Структурни кабелни системи', 'Контрол на достъпа', 'Aварийно оповестяване и Озвучаване', 'Видеонаблюдение'
             ]
         },
         {
             image: pravecImg,
             name: 'Хотел Риу Правец',
             services: [
-                'СКС', 'Аварийно оповестяване', 'Видеонаблюдение'
+                'Структурни кабелни системи', 'Aварийно оповестяване и Озвучаване', 'Видеонаблюдение'
             ]
         },
         {
             image: sofiaAirportTowerImg,
             name: 'Sofia Airport Tower',
             services: [
-                'СКС', 'Аварийно оповестяване'
+                'Структурни кабелни системи', 'Aварийно оповестяване и Озвучаване'
             ]
         },
         {
             image: megaParkImg,
             name: 'Mega Park Sofia',
             services: [
-                'СКС'
+                'Структурни кабелни системи'
             ]
         },
         {
@@ -253,14 +268,14 @@ const bulgarian = {
             image: residentialParkImg,
             name: 'Residential Park Sofia',
             services: [
-                'СКС', 'Видеонаблюдение'
+                'Структурни кабелни системи', 'Видеонаблюдение'
             ]
         },
         {
             image: theMallImg,
             name: 'The Mall',
             services: [
-                'СКС', 'Пожароизвестителна система', 'Контрол на достъпа', 'Аварийно оповестяване'
+                'Структурни кабелни системи', 'Пожароизвестителна система', 'Контрол на достъпа', 'Aварийно оповестяване и Озвучаване'
             ]
         }
     ]

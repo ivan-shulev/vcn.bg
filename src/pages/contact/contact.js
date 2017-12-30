@@ -15,23 +15,35 @@ const renderHtml = function () {
 
 // Need to make initMap globally available, for the maps callback
 window.initMap = function() {
-    const info =
-        '<h4>VCN office</h4><p>бул. "Шипченски проход" 63, офис 106</p>';
-    const vcnOfficeLocation = { lat: 42.679069, lng: 23.367509 };
+    const infoWarehouse = '<h4>VCN warehouse</h4><p>бул. "Шипченски проход" 63</p>';
+    const infoOffice = '<h4>VCN Office</h4><p>бул. "Шипченски проход" 63, ет. 10, офис 106</p>';
+    const vcnWarehouseLocation = { lat: 42.678762, lng: 23.367724 };
+    const vcnOfficeLocation = { lat: 42.678533, lng: 23.366522 };
     const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 17,
-        center: vcnOfficeLocation
+        center: vcnWarehouseLocation
     });
-    const infowindow = new google.maps.InfoWindow({
-        content: info
+    const infoWarehouseWindow = new google.maps.InfoWindow({
+        content: infoWarehouse
+    });
+    const infoOfficeWindow = new google.maps.InfoWindow({
+        content: infoOffice
     });
     const marker = new google.maps.Marker({
-        position: vcnOfficeLocation,
+        position: vcnWarehouseLocation,
         map: map,
         icon: pin
     });
     marker.addListener('click', function() {
-        infowindow.open(map, marker);
+        infoWarehouseWindow.open(map, marker);
+    });
+    const marker2 = new google.maps.Marker({
+        position: vcnOfficeLocation,
+        map: map,
+        icon: pin
+    });
+    marker2.addListener('click', function() {
+        infoOfficeWindow.open(map, marker2);
     });
 };
 

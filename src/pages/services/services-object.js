@@ -1,33 +1,35 @@
 const english = {
     header: 'What we offer',
-    firstRow: 'Design, implementation and <strong>launch</strong> of',
+    firstRow: 'Design, implementation, engineering and commissioning of',
     servicesArray: [
-        'Intrusion systems',
-        'Access Control',
+        'Access control',
         'Fire alarm systems',
         'Public address systems',
+        'Intrusion systems',
         'CCTV',
-        'BMS'
+        'Audio-video intercom systems',
+        'Software platforms for integration of security systems'
     ],
-    secondRow: 'Design, implementation and certification of SKS',
-    thirdRow: 'Consulting Services',
-    fourthRow: 'Maintenance of built systems'
+    secondRow: 'Design, implementation and certification of structured cabling systems',
+    thirdRow: 'Consulting services from a competent and dedicated team of certified professionals',
+    fourthRow: 'Warranty and after-guarantee technical maintenance of listed systems and solutions'
 };
 
 const bulgarian = {
     header: 'Какво предлагаме',
-    firstRow: 'Проектиране, изграждане и <strong>пускове</strong> на',
+    firstRow: 'Проектиране, изграждане, инженеринг и въвеждане в експлоатация на',
     servicesArray: [
-        'СОТ',
-        'Контрол на достъп',
+        'Контрол на достъпа',
         'Пожароизвестяване',
-        'Аварийно оповестяване',
+        'Аварийно оповестяване и Озвучаване',
         'Видеонаблюдение',
-        'БМС'
+        'Сигнално-охранителни системи',
+        'Аудио-видео интеркоми',
+        'Софтуерни платформи за интеграция на системи за охрана'
     ],
-    secondRow: 'Проектиране, изграждане и сертифициране на СКС',
-    thirdRow: 'Консултантски услуги',
-    fourthRow: 'Поддръжка на изградените системи'
+    secondRow: 'Проектиране, изграждане и сертифициране на структурни кабелни системи',
+    thirdRow: 'Консултантски услуги от компетентен и отдаден екип сертифицирани професионалисти',
+    fourthRow: 'Гаранционна и следгаранционна техническа поддръжка на изброените системи и решения'
 };
 
 const servicesObject = {
