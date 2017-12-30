@@ -129,8 +129,10 @@ header {
 }
 
 @media screen and (min-width: 770px) {
+    .lang-change-buttons, .header__navigation {
+        min-width: 325px;
+    }
     .lang-change-buttons {
-        min-width: 310px;
         text-align: right;
     }
     .no-flexbox {
