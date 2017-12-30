@@ -17,6 +17,8 @@ import residentialParkImg from './images/projects/residential-park-sofia.jpg';
 import theMallImg from './images/projects/the-mall-sofia.jpg';
 import expo2000 from './images/projects/expo-2000.jpg';
 
+import { englishServiceNames, bulgarianServiceNames } from './services-constants.js';
+
 const english = {
     title: 'Completed projects',
     projects: [
@@ -24,258 +26,258 @@ const english = {
             image: capitalFortImg,
             name: 'Capital Fort',
             services: [
-                'Structured cabling systems', 'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Engineering and commissioning of the listed systems and solutions'
+                englishServiceNames.sks, englishServiceNames.accessControl, englishServiceNames.fireAlarm, englishServiceNames.cctv, englishServiceNames.publicAddress, englishServiceNames.commissioning
             ]
         },
         {
             image: expo2000,
             name: 'Expo 2000 - Phase 3 and 4',
             services: [
-                'Structured cabling systems', 'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Intrusion systems', 'Audio-video intercom systems', 'Engineering and commissioning of the listed systems and solutions'
+                englishServiceNames.sks, englishServiceNames.accessControl, englishServiceNames.fireAlarm, englishServiceNames.cctv, englishServiceNames.publicAddress, englishServiceNames.sot, englishServiceNames.intercom, englishServiceNames.commissioning
             ]
         },
         {
             image: osramImg,
             name: 'Factory "Osram" - Plovdiv',
             services: [
-                'Structured cabling systems', 'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Engineering and commissioning of the listed systems and solutions'
+                englishServiceNames.sks, englishServiceNames.accessControl, englishServiceNames.fireAlarm, englishServiceNames.cctv, englishServiceNames.publicAddress, englishServiceNames.commissioning
             ]
         },
         {
             image: infinityTowerImg,
             name: 'Infinity tower',
             services: [
-                'Structured cabling systems', 'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Engineering and commissioning of the listed systems and solutions'
+                englishServiceNames.sks, englishServiceNames.accessControl, englishServiceNames.fireAlarm, englishServiceNames.cctv, englishServiceNames.publicAddress, englishServiceNames.commissioning
             ]
         },
         {
             image: vMwareImg,
             name: 'VMware',
             services: [
-                'Structured cabling systems'
+                englishServiceNames.sks
             ]
         },
         {
             image: sanStefanoImg,
             name: 'San Stefano Plaza',
             services: [
-                'Software platforms for integration of security systems', 'Intrusion systems', 'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Audio-video intercom systems', 'Engineering and commissioning of the listed systems and solutions'
+                englishServiceNames.softIntegrationPlatform, englishServiceNames.sot, englishServiceNames.accessControl, englishServiceNames.fireAlarm, englishServiceNames.cctv, englishServiceNames.publicAddress, englishServiceNames.intercom, englishServiceNames.commissioning
             ]
         },
         {
             image: novotelImg,
             name: 'Novotel',
             services: [
-                'Software platforms for integration of security systems', 'Intrusion systems', 'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Engineering and commissioning of the listed systems and solutions'
+                englishServiceNames.softIntegrationPlatform, englishServiceNames.sot, englishServiceNames.accessControl, englishServiceNames.fireAlarm, englishServiceNames.cctv, englishServiceNames.publicAddress, englishServiceNames.commissioning
             ]
         },
         {
             image: rnmImg,
             name: 'R&M Bulgaria',
             services: [
-                'Fire alarm systems', 'Public address systems', 'CCTV', 'Access control', 'Engineering and commissioning of the listed systems and solutions'
+                englishServiceNames.fireAlarm, englishServiceNames.publicAddress, englishServiceNames.cctv, englishServiceNames.accessControl, englishServiceNames.commissioning
             ]
         },
         {
             image: serdicaImg,
             name: 'Serdica Center - offices',
             services: [
-                'Access control', 'Fire alarm systems', 'CCTV', 'Public address systems', 'Engineering and commissioning of the listed systems and solutions'
+                englishServiceNames.accessControl, englishServiceNames.fireAlarm, englishServiceNames.cctv, englishServiceNames.publicAddress, englishServiceNames.commissioning
             ]
         },
         {
             image: litexTowerImg,
             name: 'Litex Tower',
             services: [
-                'Access control', 'BMS', 'CCTV', 'Structured cabling systems', 'Engineering and commissioning of the listed systems and solutions'
+                englishServiceNames.accessControl, englishServiceNames.bms, englishServiceNames.cctv, englishServiceNames.sks, englishServiceNames.commissioning
             ]
         },
         {
             image: centillionImg,
             name: 'Centillion',
             services: [
-                'Access control', 'CCTV', 'Structured cabling systems', 'Fire alarm systems', 'Engineering and commissioning of the listed systems and solutions'
+                englishServiceNames.accessControl, englishServiceNames.cctv, englishServiceNames.sks, englishServiceNames.fireAlarm, englishServiceNames.commissioning
             ]
         },
         {
             image: benchmarkImg,
             name: 'Benchmark',
             services: [
-                'Structured cabling systems', 'Access control', 'Public address systems', 'CCTV'
+                englishServiceNames.sks, englishServiceNames.accessControl, englishServiceNames.publicAddress, englishServiceNames.cctv
             ]
         },
         {
             image: pravecImg,
             name: 'Hotel Riu Pravets Resort',
             services: [
-                'Structured cabling systems', 'Public address systems', 'CCTV'
+                englishServiceNames.sks, englishServiceNames.publicAddress, englishServiceNames.cctv
             ]
         },
         {
             image: sofiaAirportTowerImg,
             name: 'Sofia Airport Tower',
             services: [
-                'Structured cabling systems', 'Public address systems'
+                englishServiceNames.sks, englishServiceNames.publicAddress
             ]
         },
         {
             image: megaParkImg,
             name: 'Mega Park Sofia',
             services: [
-                'Structured cabling systems'
+                englishServiceNames.sks
             ]
         },
         {
             image: radugaImg,
             name: 'Raduga Kamchia',
             services: [
-                'BMS', 'Fire alarm systems'
+                englishServiceNames.bms, englishServiceNames.fireAlarm
             ]
         },
         {
             image: residentialParkImg,
             name: 'Residential Park Sofia',
             services: [
-                'Structured cabling systems', 'CCTV'
+                englishServiceNames.sks, englishServiceNames.cctv
             ]
         },
         {
             image: theMallImg,
             name: 'The Mall',
             services: [
-                'Structured cabling systems', 'Fire alarm systems', 'Access control', 'Public address systems'
+                englishServiceNames.sks, englishServiceNames.fireAlarm, englishServiceNames.accessControl, englishServiceNames.publicAddress
             ]
         }
     ]
 };
 
 const bulgarian = {
-    title: 'Завършени проекти',
+    title: 'Completed projects',
     projects: [
         {
             image: capitalFortImg,
             name: 'Capital Fort',
             services: [
-                'Структурни кабелни системи', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
+                bulgarianServiceNames.sks, bulgarianServiceNames.accessControl, bulgarianServiceNames.fireAlarm, bulgarianServiceNames.cctv, bulgarianServiceNames.publicAddress, bulgarianServiceNames.commissioning
             ]
         },
         {
             image: expo2000,
-            name: 'Expo 2000 - Фаза 3 и 4',
+            name: 'Expo 2000 - Phase 3 and 4',
             services: [
-                'Структурни кабелни системи', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Сигнално-охранителна система', 'Аудио-видео интерком', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
+                bulgarianServiceNames.sks, bulgarianServiceNames.accessControl, bulgarianServiceNames.fireAlarm, bulgarianServiceNames.cctv, bulgarianServiceNames.publicAddress, bulgarianServiceNames.sot, bulgarianServiceNames.intercom, bulgarianServiceNames.commissioning
             ]
         },
         {
             image: osramImg,
-            name: 'Завод "Осрам" - гр. Пловдив',
+            name: 'Factory "Osram" - Plovdiv',
             services: [
-                'Структурни кабелни системи', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
+                bulgarianServiceNames.sks, bulgarianServiceNames.accessControl, bulgarianServiceNames.fireAlarm, bulgarianServiceNames.cctv, bulgarianServiceNames.publicAddress, bulgarianServiceNames.commissioning
             ]
         },
         {
             image: infinityTowerImg,
-            name: 'Infinity Tower',
+            name: 'Infinity tower',
             services: [
-                'Структурни кабелни системи', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
+                bulgarianServiceNames.sks, bulgarianServiceNames.accessControl, bulgarianServiceNames.fireAlarm, bulgarianServiceNames.cctv, bulgarianServiceNames.publicAddress, bulgarianServiceNames.commissioning
             ]
         },
         {
             image: vMwareImg,
             name: 'VMware',
             services: [
-                'Структурни кабелни системи'
+                bulgarianServiceNames.sks
             ]
         },
         {
             image: sanStefanoImg,
-            name: 'Сан Стефано Плаза',
+            name: 'San Stefano Plaza',
             services: [
-                'Софтуерна платформа за интеграция на системи за охрана', 'Сигнално-охранителна система', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Аудио-видео интерком', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
+                bulgarianServiceNames.softIntegrationPlatform, bulgarianServiceNames.sot, bulgarianServiceNames.accessControl, bulgarianServiceNames.fireAlarm, bulgarianServiceNames.cctv, bulgarianServiceNames.publicAddress, bulgarianServiceNames.intercom, bulgarianServiceNames.commissioning
             ]
         },
         {
             image: novotelImg,
             name: 'Novotel',
             services: [
-                'Софтуерна платформа за интеграция на системи за охрана', 'Сигнално-охранителна система', 'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
+                bulgarianServiceNames.softIntegrationPlatform, bulgarianServiceNames.sot, bulgarianServiceNames.accessControl, bulgarianServiceNames.fireAlarm, bulgarianServiceNames.cctv, bulgarianServiceNames.publicAddress, bulgarianServiceNames.commissioning
             ]
         },
         {
             image: rnmImg,
             name: 'R&M Bulgaria',
             services: [
-                'Пожароизвестителна система', 'Aварийно оповестяване и Озвучаване', 'Видеонаблюдение', 'Контрол на достъпа', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
+                bulgarianServiceNames.fireAlarm, bulgarianServiceNames.publicAddress, bulgarianServiceNames.cctv, bulgarianServiceNames.accessControl, bulgarianServiceNames.commissioning
             ]
         },
         {
             image: serdicaImg,
             name: 'Serdica Center - offices',
             services: [
-                'Контрол на достъпа', 'Пожароизвестителна система', 'Видеонаблюдение', 'Aварийно оповестяване и Озвучаване', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
+                bulgarianServiceNames.accessControl, bulgarianServiceNames.fireAlarm, bulgarianServiceNames.cctv, bulgarianServiceNames.publicAddress, bulgarianServiceNames.commissioning
             ]
         },
         {
             image: litexTowerImg,
             name: 'Litex Tower',
             services: [
-                'Контрол на достъпа', 'БМС', 'Видеонаблюдение', 'Структурни кабелни системи', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
+                bulgarianServiceNames.accessControl, bulgarianServiceNames.bms, bulgarianServiceNames.cctv, bulgarianServiceNames.sks, bulgarianServiceNames.commissioning
             ]
         },
         {
             image: centillionImg,
             name: 'Centillion',
             services: [
-                'Контрол на достъпа', 'Видеонаблюдение', 'Структурни кабелни системи', 'Пожароизвестителна система', 'Инжинеринг и въвеждане в експлоатация на изброените системи и решения'
+                bulgarianServiceNames.accessControl, bulgarianServiceNames.cctv, bulgarianServiceNames.sks, bulgarianServiceNames.fireAlarm, bulgarianServiceNames.commissioning
             ]
         },
         {
             image: benchmarkImg,
             name: 'Benchmark',
             services: [
-                'Структурни кабелни системи', 'Контрол на достъпа', 'Aварийно оповестяване и Озвучаване', 'Видеонаблюдение'
+                bulgarianServiceNames.sks, bulgarianServiceNames.accessControl, bulgarianServiceNames.publicAddress, bulgarianServiceNames.cctv
             ]
         },
         {
             image: pravecImg,
-            name: 'Хотел Риу Правец',
+            name: 'Hotel Riu Pravets Resort',
             services: [
-                'Структурни кабелни системи', 'Aварийно оповестяване и Озвучаване', 'Видеонаблюдение'
+                bulgarianServiceNames.sks, bulgarianServiceNames.publicAddress, bulgarianServiceNames.cctv
             ]
         },
         {
             image: sofiaAirportTowerImg,
             name: 'Sofia Airport Tower',
             services: [
-                'Структурни кабелни системи', 'Aварийно оповестяване и Озвучаване'
+                bulgarianServiceNames.sks, bulgarianServiceNames.publicAddress
             ]
         },
         {
             image: megaParkImg,
             name: 'Mega Park Sofia',
             services: [
-                'Структурни кабелни системи'
+                bulgarianServiceNames.sks
             ]
         },
         {
             image: radugaImg,
-            name: 'Радуга Камчия',
+            name: 'Raduga Kamchia',
             services: [
-                'БМС', 'Пожароизвестителна система'
+                bulgarianServiceNames.bms, bulgarianServiceNames.fireAlarm
             ]
         },
         {
             image: residentialParkImg,
             name: 'Residential Park Sofia',
             services: [
-                'Структурни кабелни системи', 'Видеонаблюдение'
+                bulgarianServiceNames.sks, bulgarianServiceNames.cctv
             ]
         },
         {
             image: theMallImg,
             name: 'The Mall',
             services: [
-                'Структурни кабелни системи', 'Пожароизвестителна система', 'Контрол на достъпа', 'Aварийно оповестяване и Озвучаване'
+                bulgarianServiceNames.sks, bulgarianServiceNames.fireAlarm, bulgarianServiceNames.accessControl, bulgarianServiceNames.publicAddress
             ]
         }
     ]
