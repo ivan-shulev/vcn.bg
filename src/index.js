@@ -4,6 +4,7 @@ import checkFlex from './utils/flex-check';
 import clickEvent from './utils/click-event-setter';
 
 import styles from './styles.scss';
+import icon from './favicon.ico';
 import homeHtml from './pages/home/home';
 import aboutHtml from './pages/about/about';
 import servicesHtml from './pages/services/services';

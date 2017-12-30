@@ -12,7 +12,7 @@ const config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'scripts/[name].[chunkhash].js',
-        publicPath: process.env.NODE_ENV === 'production' ? '/vcn/' : '/'
+        publicPath: process.env.NODE_ENV === 'production' ? '/' : '/vcn/'
     },
     devtool: 'source-map',
     module: {
@@ -55,6 +55,18 @@ const config = {
                     loader: 'file-loader',
                     options: {
                         name: 'assets/fonts/[name].[ext]'
+                    }
+                }]
+            },
+            {
+                test: /\.ico$/,
+                include: [
+                    path.resolve(__dirname, 'src')
+                ],
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '/[name].[ext]'
                     }
                 }]
             },
