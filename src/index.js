@@ -5,7 +5,7 @@ import clickEvent from './utils/click-event-setter';
 
 import styles from './styles.scss';
 import icon from './favicon.ico';
-import homeHtml from './pages/home/home';
+// import homeHtml from './pages/home/home';
 import aboutHtml from './pages/about/about';
 import servicesHtml from './pages/services/services';
 import contactHtml from './pages/contact/contact';
@@ -13,7 +13,7 @@ import loaderHtml from './components/loader/loader';
 import headerHtml from './components/header/header';
 import { initialNavigoRender } from './utils/navigo-render';
 
-let router;
+let router, homeHtml;
 const clEvent = new Event('changeLang');
 const el = (sel) => document.querySelector(sel);
 const setContent = (id, content) => el('.js-content').innerHTML = content || el('#content-' + id).innerHTML;
@@ -90,7 +90,12 @@ function handleScreenRatio() {
 
 document.addEventListener('DOMContentLoaded', function () {
     bodyElement.classList.remove('loading-content');
-    handleRouting();
+    setTimeout(() => {
+        import(/* webpackChunkName: "homeHtml" */'./pages/home/home').then(html => {
+            homeHtml = html;
+            handleRouting();
+        });
+    }, 2000);
     handleScreenRatio();
     initialNavigoRender(router);
 });

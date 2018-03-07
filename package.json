@@ -21,6 +21,7 @@
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.0.0",
+    "babel-plugin-dynamic-import-webpack": "^1.0.2",
     "babel-plugin-transform-es2015-for-of": "^6.23.0",
     "babel-preset-env": "^1.5.2",
     "caniuse-lite": "^1.0.30000715",
