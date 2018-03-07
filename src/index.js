@@ -35,40 +35,41 @@ const varw = (function (context) {
     };
 })(window);
 
+const pages = ['about', 'services', 'home', 'contact'];
+let allLoaded = false;
+
+function importAllOtherPages() {
+    const promises = [];
+    pages.forEach(page => {
+        promises.push(importPageHtml(page));
+    })
+    return Promise.all(promises).then(() => allLoaded = true);
+}
+
+function importPageHtml(page) {
+    return import(`./pages/${page}/${page}`);
+}
+
+function handleRouteChange(page) {
+    importPageHtml(page).then(html => {
+        setContent(page.charAt(0).toUpperCase() + page.slice(1), html);
+        dispatchRouteChangeEvent(page);
+    }).then(() => {
+        if(!allLoaded) {
+            importAllOtherPages();
+        }
+    });
+}
+
 function handleRouting() {
     router = new Navigo();
     router
         .on({
-            'about': () => {
-                import('./pages/about/about'/* webpackChunkName: "about" */).then(html => {
-                    setContent('About', html);
-                    dispatchRouteChangeEvent('about');
-                });
-            },
-            'services': () => {
-                import('./pages/services/services'/* webpackChunkName: "services" */).then(html => {
-                    setContent('Services', html);
-                    dispatchRouteChangeEvent('services');
-                });
-            },
-            'projects': () => {
-                import('./pages/home/home'/* webpackChunkName: "home" */).then(html => {
-                    setContent('Home', html);
-                    dispatchRouteChangeEvent('home');
-                });
-            },
-            'contact': () => {
-                import('./pages/contact/contact'/* webpackChunkName: "contact" */).then(html => {
-                    setContent('Contact', html);
-                    dispatchRouteChangeEvent('contact');
-                });
-            },
-            '*': () => {
-                import('./pages/home/home'/* webpackChunkName: "home" */).then(html => {
-                    setContent('Home', html);
-                    dispatchRouteChangeEvent('home');
-                });
-            }
+            'about': () => handleRouteChange('about'),
+            'services': () => handleRouteChange('services'),
+            'projects': () => handleRouteChange('home'),
+            'contact': () => handleRouteChange('contact'),
+            '*': () => handleRouteChange('home'),
         })
         .resolve();
 }
