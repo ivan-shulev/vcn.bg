@@ -5,10 +5,7 @@ import clickEvent from './utils/click-event-setter';
 
 import styles from './styles.scss';
 import icon from './favicon.ico';
-// import homeHtml from './pages/home/home';
-import aboutHtml from './pages/about/about';
-import servicesHtml from './pages/services/services';
-import contactHtml from './pages/contact/contact';
+
 import loaderHtml from './components/loader/loader';
 import headerHtml from './components/header/header';
 import { initialNavigoRender } from './utils/navigo-render';
@@ -43,24 +40,34 @@ function handleRouting() {
     router
         .on({
             'about': () => {
-                setContent('About', aboutHtml);
-                dispatchRouteChangeEvent('about');
+                import('./pages/about/about'/* webpackChunkName: "about" */).then(html => {
+                    setContent('About', html);
+                    dispatchRouteChangeEvent('about');
+                });
             },
             'services': () => {
-                setContent('Services', servicesHtml);
-                dispatchRouteChangeEvent('services');
+                import('./pages/services/services'/* webpackChunkName: "services" */).then(html => {
+                    setContent('Services', html);
+                    dispatchRouteChangeEvent('services');
+                });
             },
             'projects': () => {
-                setContent('Home', homeHtml);
-                dispatchRouteChangeEvent('home');
+                import('./pages/home/home'/* webpackChunkName: "home" */).then(html => {
+                    setContent('Home', html);
+                    dispatchRouteChangeEvent('home');
+                });
             },
             'contact': () => {
-                setContent('Contact', contactHtml);
-                dispatchRouteChangeEvent('contact');
+                import('./pages/contact/contact'/* webpackChunkName: "contact" */).then(html => {
+                    setContent('Contact', html);
+                    dispatchRouteChangeEvent('contact');
+                });
             },
             '*': () => {
-                setContent('Home', homeHtml);
-                dispatchRouteChangeEvent('home');
+                import('./pages/home/home'/* webpackChunkName: "home" */).then(html => {
+                    setContent('Home', html);
+                    dispatchRouteChangeEvent('home');
+                });
             }
         })
         .resolve();
@@ -90,14 +97,9 @@ function handleScreenRatio() {
 
 document.addEventListener('DOMContentLoaded', function () {
     bodyElement.classList.remove('loading-content');
-    setTimeout(() => {
-        import(/* webpackChunkName: "homeHtml" */'./pages/home/home').then(html => {
-            homeHtml = html;
-            handleRouting();
-        });
-    }, 2000);
-    handleScreenRatio();
+    handleRouting();
     initialNavigoRender(router);
+    handleScreenRatio();
 });
 
 window.onresize = function () {

@@ -12,6 +12,7 @@ const config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'scripts/[name].[chunkhash].js',
+        chunkFilename: 'scripts/[name].[chunkhash].js',
         publicPath: process.env.NODE_ENV === 'production' ? '/' : '/vcn/'
     },
     devtool: 'source-map',
@@ -27,7 +28,7 @@ const config = {
                             [
                                 'env' , {
                                     'targets': {
-                                        'browsers': ['last 2 versions', 'safari >= 7']
+                                        'browsers': ['last 2 versions']
                                     }
                                 }
                             ]
@@ -100,6 +101,7 @@ const config = {
         compress: true,
         port: 9000,
         overlay: true,
+        inline: true,        
         historyApiFallback: true
     },
     plugins: [
@@ -112,7 +114,7 @@ const config = {
         new webpack.optimize.CommonsChunkPlugin({
             name: ['vendor', 'manifest']
         }),
-        new ExtractTextPlugin('styles/styles.css'),
+        new ExtractTextPlugin({filename: 'styles/styles.css', allChunks: true}),
         // This is needed, so the bootstrap-sass can load its dependency
         // For some reason, the order I specify in the vendor array, does not include
         // jQuery before bootstrap and an error is thrown.
