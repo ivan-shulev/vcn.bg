@@ -16,6 +16,10 @@ const el = (sel) => document.querySelector(sel);
 const setContent = (id, content) => el('.js-content').innerHTML = content || el('#content-' + id).innerHTML;
 const bodyElement = el('body');
 
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+}
+
 function dispatchRouteChangeEvent(detail) {
     const crEvent = new CustomEvent('changeRoute', { detail });
     document.dispatchEvent(crEvent);
@@ -55,7 +59,7 @@ function handleRouteChange(page) {
         setContent(page.charAt(0).toUpperCase() + page.slice(1), html);
         dispatchRouteChangeEvent(page);
     }).then(() => {
-        if(!allLoaded) {
+        if (!allLoaded) {
             importAllOtherPages();
         }
     });
