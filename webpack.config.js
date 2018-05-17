@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 const ExtractTextPlugin = require('extract-text-webpack-plugin'); //installed via npm
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
 
@@ -26,7 +27,7 @@ const config = {
                     options: {
                         presets: [
                             [
-                                'env' , {
+                                'env', {
                                     'targets': {
                                         'browsers': ['last 2 versions']
                                     }
@@ -110,7 +111,7 @@ const config = {
         compress: true,
         port: 9000,
         overlay: true,
-        inline: true,        
+        inline: true,
         historyApiFallback: true
     },
     plugins: [
@@ -123,7 +124,11 @@ const config = {
         new webpack.optimize.CommonsChunkPlugin({
             name: ['vendor', 'manifest']
         }),
-        new ExtractTextPlugin({filename: 'styles/styles.css', allChunks: true}),
+        new webpack.optimize.LimitChunkCountPlugin({
+            maxChunks: 8, // Must be greater than or equal to one
+            minChunkSize: 1000
+        }),
+        new ExtractTextPlugin({ filename: 'styles/styles.css', allChunks: true }),
         // This is needed, so the bootstrap-sass can load its dependency
         // For some reason, the order I specify in the vendor array, does not include
         // jQuery before bootstrap and an error is thrown.
@@ -137,6 +142,9 @@ const config = {
         new ImageminPlugin({
             test: /\.png$|\.jpg$|\.gif$|\.svg$/,
             include: /(src)/
+        }),
+        new SWPrecacheWebpackPlugin({
+            staticFileGlobsIgnorePatterns: [/\.map$/]
         })
     ]
 };
