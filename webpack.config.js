@@ -60,6 +60,15 @@ const config = {
                 }]
             },
             {
+                test: /\.pdf$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: 'assets/files/[name].[ext]'
+                    }
+                }]
+            },
+            {
                 test: /\.ico$/,
                 include: [
                     path.resolve(__dirname, 'src')

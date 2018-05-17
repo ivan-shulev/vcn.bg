@@ -8,6 +8,7 @@ let aboutContainer, initialHTML;
 
 const renderHtml = function () {
     renderMustache(initialHTML, { content: aboutTrans[language] }, aboutContainer);
+    document.getElementById('iso-cert__link').setAttribute('href', 'assets/files/cert-' + language + '.pdf');
 }
 
 document.addEventListener('changeRoute', function (e) {

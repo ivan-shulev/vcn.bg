@@ -5,7 +5,9 @@ const bulgarian = {
     thirdRow: 'Винаги в крак с иновациите, ние помагаме на своите клиенти да направят интелигентен избор сред многообразието от предложения, като трансформираме и най-сложните технологии в разбираеми и функционални решения.',
     fourthRow: 'Ние работим за успеха и развитието на бизнеса на нашите клиенти, съчетавайки най-новите постижения в комуникациите с нашите професионални услуги.',
     fifthRow: 'Ние непрекъснато инвестираме и подобряваме компетентността на нашия екип от опитни инженери, професионални мениджъри на проекти, успешни акаунт мениджъри и отлични специалисти по поддръжка и обслужване.',
-    partnersHeader: 'Партньори'
+    partnersHeader: 'Партньори',
+    isoHeader: 'ИСО 9001 Сертифицирани',
+    isoText: 'От 19.04.2018 вече сме официално сертифицирани! Кликнете на картинката по-долу за да отворите сертификата.'
 }
 
 const english = {
@@ -15,7 +17,9 @@ const english = {
     thirdRow: 'Staying on the edge of innovations we are shielding our customers from complexity and diversity by transforming even the most complicated technologies into comprehensive and straightforward solutions.',
     fourthRow: 'Bringing industry innovations faster and closer to the market we empower our customers’ business by offering best-of-class services.',
     fifthRow: 'We constantly invest and improve our team of skilled engineers, professional project managers, trained account managers and excellent support and maintenance.',
-    partnersHeader: 'Partners'
+    partnersHeader: 'Partners',
+    isoHeader: 'ISO 9001 Certified',
+    isoText: 'From 19.04.2018 we are officially certified! Click on the image below, to open the certificate.'
 }
 
 const aboutTrans = {
