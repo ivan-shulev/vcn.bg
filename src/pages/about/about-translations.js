@@ -7,7 +7,8 @@ const bulgarian = {
     fifthRow: 'Ние непрекъснато инвестираме и подобряваме компетентността на нашия екип от опитни инженери, професионални мениджъри на проекти, успешни акаунт мениджъри и отлични специалисти по поддръжка и обслужване.',
     partnersHeader: 'Партньори',
     isoHeader: 'ИСО 9001 Сертифицирани',
-    isoText: 'От 19.04.2018 вече сме официално сертифицирани! Кликнете на картинката по-долу за да отворите сертификата.'
+    isoText: 'От 19.04.2018 вече сме официално сертифицирани! Кликнете на картинката по-долу за да отворите сертификата.',
+    gdprHeader: 'Съобразено с GDPR'
 }
 
 const english = {
@@ -19,7 +20,8 @@ const english = {
     fifthRow: 'We constantly invest and improve our team of skilled engineers, professional project managers, trained account managers and excellent support and maintenance.',
     partnersHeader: 'Partners',
     isoHeader: 'ISO 9001 Certified',
-    isoText: 'From 19.04.2018 we are officially certified! Click on the image below, to open the certificate.'
+    isoText: 'From 19.04.2018 we are officially certified! Click on the image below, to open the certificate.',
+    gdprHeader: 'GDPR compliant'
 }
 
 const aboutTrans = {
