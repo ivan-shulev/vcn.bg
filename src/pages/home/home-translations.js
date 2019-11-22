@@ -22,42 +22,49 @@ import expo2000 from './images/projects/expo-2000.jpg';
 
 import { englishServiceNames, bulgarianServiceNames } from './services-constants.js';
 
+const bgMol = {
+    image: bulgariamallTowersImg,
+    name: 'Mall Bulgaria - Tower A, Tower B and Cargill Tower',
+    services: [
+        'FPA 5000 Fire Alarm - Fire Detection System - Bosch Security Systems',
+        'Plena - Public Address System - Bosch Security Systems',
+        'Bosch Video Management System - Digital CCTV System - Bosch Security Systems',
+        'AMC Access Control - Access Modular Control System - Bosch Security Systems',
+        'Structure Cabling System - Data Network - Reichle & De-Massari',
+        'Build of Security and Data Systems and integration of all security systems into Building Integration Software (BIS) of Bosch Security Systems'
+    ]
+};
+
+const equinix = {
+    image: equinixImg,
+    name: 'EQUINIX SO2 DATA CENTER',
+    services: [
+        'FPA 5000 - Fire Detection System - Bosch Security Systems',
+        'SYNCHRO-XT - Fire Extinguishing Control System - Kentec Electronics',
+        'AMAG CompleteView - Digital CCTV System - AMAG Technology',
+        'AMAG Symmetry - Access Control System - AMAG Technology',
+        'Structure Cabling System - Data and Telephony Network - Reichle & De-Massari'
+    ]
+};
+
+const fraxinus = {
+    image: fraxinusImg,
+    name: 'FRAXINUS Business Center',
+    services: [
+        "FPA 5000 Fire Alarm - Fire Detection System - Bosch Security Systems",
+        "Paviro - Public Address System - Bosch Security Systems",
+        "Hikvision - Digital CCTV System - Hikvision",
+        "AMC Access Control - Access Modular Control System - Bosch Security Systems",
+        "Structure Cabling System - Data Network - Reichle & De-Massari"
+    ]
+};
+
 const english = {
     title: 'Our projects',
     projects: [
-        {
-            image: equinixImg,
-            name: 'EQUINIX SO2 DATA CENTER',
-            services: [
-                'FPA 5000 - Fire Detection System - Bosch Security Systems',
-                'SYNCHRO-XT - Fire Extinguishing Control System - Kentec Electronics',
-                'AMAG CompleteView - Digital CCTV System - AMAG Technology',
-                'AMAG Symmetry - Access Control System - AMAG Technology',
-                'Structure Cabling System - Data and Telephony Network - Reichle & De-Massari'
-            ]
-        },
-        {
-            image: fraxinusImg,
-            name: 'FRAXINUS Business Center',
-            services: [
-                "FPA 5000 Fire Alarm - Fire Detection System - Bosch Security Systems",
-                "Paviro - Public Address System - Bosch Security Systems",
-                "Hikvision - Digital CCTV System - Hikvision",
-                "AMC Access Control - Access Modular Control System - Bosch Security Systems",
-                "Structure Cabling System - Data Network - Reichle & De-Massari"
-            ]
-        },
-        {
-            image: bulgariamallTowersImg,
-            name: 'Mall Bulgaria - Tower A, Tower B and Cargill Tower',
-            services: [
-                'FPA 5000 Fire Alarm - Fire Detection System - Bosch Security Systems',
-                'Plena - Public Address System - Bosch Security Systems',
-                'Bosch Video Management System - Digital CCTV System - Bosch Security Systems',
-                'AMC Access Control - Access Modular Control System - Bosch Security Systems',
-                'Structure Cabling System - Data Network - Reichle & De-Massari'
-            ]
-        },
+        equinix,
+        fraxinus,
+        bgMol,
         {
             image: capitalFortImg,
             name: 'Capital Fort',
@@ -183,39 +190,9 @@ const english = {
 const bulgarian = {
     title: 'Нашите проекти',
     projects: [
-        {
-            image: equinixImg,
-            name: 'EQUINIX SO2 DATA CENTER',
-            services: [
-                'FPA 5000 - Fire Detection System - Bosch Security Systems',
-                'SYNCHRO-XT - Fire Extinguishing Control System - Kentec Electronics',
-                'AMAG CompleteView - Digital CCTV System - AMAG Technology',
-                'AMAG Symmetry - Access Control System - AMAG Technology',
-                'Structure Cabling System - Data and Telephony Network - Reichle & De-Massari'
-            ]
-        },
-        {
-            image: fraxinusImg,
-            name: 'FRAXINUS Business Center',
-            services: [
-                "FPA 5000 Fire Alarm - Fire Detection System - Bosch Security Systems",
-                "Paviro - Public Address System - Bosch Security Systems",
-                "Hikvision - Digital CCTV System - Hikvision",
-                "AMC Access Control - Access Modular Control System - Bosch Security Systems",
-                "Structure Cabling System - Data Network - Reichle & De-Massari"
-            ]
-        },
-        {
-            image: bulgariamallTowersImg,
-            name: 'Mall Bulgaria - Tower A, Tower B and Cargill Tower',
-            services: [
-                'FPA 5000 Fire Alarm - Fire Detection System - Bosch Security Systems',
-                'Plena - Public Address System - Bosch Security Systems',
-                'Bosch Video Management System - Digital CCTV System - Bosch Security Systems',
-                'AMC Access Control - Access Modular Control System - Bosch Security Systems',
-                'Structure Cabling System - Data Network - Reichle & De-Massari'
-            ]
-        },
+        equinix,
+        fraxinus,
+        bgMol,
         {
             image: capitalFortImg,
             name: 'Capital Fort',
