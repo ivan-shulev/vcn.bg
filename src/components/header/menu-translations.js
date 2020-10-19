@@ -17,4 +17,4 @@ const linkTranslations = {
     bulgarian
 }
 
-module.exports = linkTranslations;
+export default linkTranslations;

@@ -51,4 +51,4 @@ document.addEventListener('DOMContentLoaded', function () {
     slider.addEventListener('touchmove', handleMove, false);
 });
 
-module.exports = loaderHtml;
+export default loaderHtml;

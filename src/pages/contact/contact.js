@@ -71,4 +71,4 @@ document.addEventListener('changeRoute', function(e) {
     setChangeLang(renderHtml, 'contact');
 });
 
-module.exports = contactHtml;
+export default contactHtml;

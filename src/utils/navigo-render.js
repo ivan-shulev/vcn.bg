@@ -17,16 +17,11 @@ function renderNavigoLinks() {
     })
 }
 
-function navigoReRender() {
+export function navigoReRender() {
     renderNavigoLinks();
 }
 
-function initialNavigoRender(router) {
+export function initialNavigoRender(router) {
     _router = router;
     renderNavigoLinks();
 }
-
-module.exports = {
-    initialNavigoRender,
-    navigoReRender
-};

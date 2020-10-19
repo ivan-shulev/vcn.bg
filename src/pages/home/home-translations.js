@@ -320,4 +320,4 @@ const homeTrans = {
     bulgarian
 }
 
-module.exports = homeTrans;
+export default homeTrans;
