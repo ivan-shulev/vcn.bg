@@ -37,4 +37,4 @@ const servicesObject = {
     bulgarian
 };
 
-module.exports = servicesObject;
+export default servicesObject;

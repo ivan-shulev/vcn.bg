@@ -9,7 +9,7 @@ function isNewRoute(route) {
     return _route !== route;
 }
 
-module.exports = function setChangeLang(changeLangFunc, route) {
+export default function setChangeLang(changeLangFunc, route) {
     _changeLangFunc = changeLangFunc;
     
     // _route is undefined at first

@@ -29,4 +29,4 @@ const aboutTrans = {
     english
 }
 
-module.exports = aboutTrans;
+export default aboutTrans;

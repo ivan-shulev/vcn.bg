@@ -14,5 +14,4 @@ const contactTranslations = {
     english,
     bulgarian
 }
-
-module.exports = contactTranslations;
+export default contactTranslations;

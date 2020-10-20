@@ -21,4 +21,4 @@ document.addEventListener('changeRoute', function (e) {
     setChangeLang(renderHtml, 'about');
 });
 
-module.exports = aboutHtml;
+export default aboutHtml;
