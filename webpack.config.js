@@ -29,7 +29,6 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 
 module.exports = (env) => {
-  console.log("ISPROD => ", env.production);
   return {
     mode: env.production ? "production" : "development",
     plugins: [
@@ -123,7 +122,7 @@ module.exports = (env) => {
           ],
         },
         {
-          test: /\.png$|\.jpg$|\.gif$|\.svg$/,
+          test: /\.png$|\.jpg$|\.gif$|\.svg|\.webp$/,
           include: /(src)/,
           use: [
             {
